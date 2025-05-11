@@ -17,31 +17,69 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function to load featured products
+// Cập nhật hàm loadFeaturedProducts để xóa các sản phẩm cũ trước khi thêm mới
 function loadFeaturedProducts() {
-    // This would typically be an API call
-    const products = [
-        {
-            id: 1,
-            name: 'Áo Polo Nike',
-            price: '599.000đ',
-            image: 'images/products/polo-nike.jpg'
-        },
-        {
-            id: 2,
-            name: 'Áo Thun Adidas',
-            price: '399.000đ',
-            image: 'images/products/thun-adidas.jpg'
-        },
-        // Add more products as needed
-    ];
-
-    const productsContainer = document.querySelector('.featured-products .row');
-    if (productsContainer) {
+    // Xóa sạch các sản phẩm cũ trước khi load mới
+    const featuredProductsContainer = document.getElementById('featured-products-container');
+    if (featuredProductsContainer) {
+        featuredProductsContainer.innerHTML = ''; // Xóa toàn bộ nội dung cũ
+        
+        // Thêm sản phẩm mới từ API hoặc dữ liệu tĩnh
+        // Ví dụ:
+        const products = [
+            {
+                id: 1,
+                name: 'Áo Polo Nike',
+                price: '599.000đ',
+                image: 'image/products/AoPoloNike.png',
+            },
+            {
+                id: 2,
+                name: 'Áo Thun Adidas',
+                price: '399.000đ',
+                image: 'image/products/AoThunAdidas.png',
+            },
+            {
+                id: 3, 
+                name: 'Áo Polo Nike Blue',
+                price: '599.000đ',
+                image: 'image/products/AoPoloNikeBlue.png',
+            },
+            {
+                id: 4,
+                name: 'Áo Thun Adidas Black',
+                price: '399.000đ',
+                image: 'image/products/AoThunAdidasBlack.png',
+            }
+        ];
+        
+        // Thêm mỗi sản phẩm vào container
         products.forEach(product => {
-            const productCard = createProductCard(product);
-            productsContainer.appendChild(productCard);
+            const productHtml = `
+                <div class="col-6 col-md-6 col-lg-6 mb-4">
+                    <div class="product-card p-3 bg-white rounded shadow-sm h-100">
+                        <div class="product-img-container mb-3">
+                            <img src="${product.image}" alt="${product.name}" class="img-fluid w-100">
+                        </div>
+                        <h5 class="product-title">${product.name}</h5>
+                        <div class="product-price mb-3">${product.price}</div>
+                        <button class="btn btn-primary w-100" onclick="addToCart(${product.id})">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+            `;
+            featuredProductsContainer.innerHTML += productHtml;
         });
     }
+}
+
+// Hàm bổ sung để xử lý thêm vào giỏ hàng
+function addToCart(productId) {
+    // Xử lý thêm sản phẩm vào giỏ hàng
+    console.log('Thêm sản phẩm ID:', productId, 'vào giỏ hàng');
+    
+    // Hiển thị thông báo
+    const toast = new bootstrap.Toast(document.getElementById('notificationToast'));
+    toast.show();
 }
 
 // Function to create product card

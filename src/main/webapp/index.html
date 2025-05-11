@@ -39,7 +39,7 @@
                         <button class="search-button">
                             <i class="bi bi-search"></i>
                         </button>
-                    </div>
+                    </div> 
                 </div>
                 
                 <!-- User Tools -->
@@ -209,34 +209,52 @@
             </div>
         </section>
 
-        <!-- Category Highlights -->
+                <!-- Category Highlights - Modified for horizontal layout -->
         <section class="category-highlights py-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="category-card position-relative rounded overflow-hidden">
+                <div class="row justify-content-center">
+                    <div class="col-6 col-md-4 col-lg mb-4">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
+                            <img src="image/banners/NewArrivals.png" alt="New Arrivals" class="img-fluid w-100">
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">New Arrivals</h5>
+                                <a href="products.html?category=new" class="btn btn-outline-light btn-sm">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-4">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
                             <img src="image/banners/ThoiTrangNam.png" alt="Thời trang Nam" class="img-fluid w-100">
-                            <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
-                                <h3>Thời trang Nam</h3>
-                                <a href="products.html?category=men" class="btn btn-outline-light">Xem thêm</a>
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Thời trang Nam</h5>
+                                <a href="products.html?category=men" class="btn btn-outline-light btn-sm">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="category-card position-relative rounded overflow-hidden">
+                    <div class="col-6 col-md-4 col-lg mb-4">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
                             <img src="image/banners/ThoiTrangNu.png" alt="Thời trang Nữ" class="img-fluid w-100">
-                            <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
-                                <h3>Thời trang Nữ</h3>
-                                <a href="products.html?category=women" class="btn btn-outline-light">Xem thêm</a>
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Thời trang Nữ</h5>
+                                <a href="products.html?category=women" class="btn btn-outline-light btn-sm">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="category-card position-relative rounded overflow-hidden">
+                    <div class="col-6 col-md-4 col-lg mb-4">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
                             <img src="image/banners/PhuKien.png" alt="Phụ kiện" class="img-fluid w-100">
-                            <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
-                                <h3>Phụ kiện</h3>
-                                <a href="products.html?category=accessories" class="btn btn-outline-light">Xem thêm</a>
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Phụ kiện</h5>
+                                <a href="products.html?category=accessories" class="btn btn-outline-light btn-sm">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-4">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
+                            <img src="image/banners/Collections.png" alt="Collections" class="img-fluid w-100">
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Collections</h5>
+                                <a href="products.html?category=collections" class="btn btn-outline-light btn-sm">Xem thêm</a>
                             </div>
                         </div>
                     </div>
@@ -244,18 +262,82 @@
             </div>
         </section>
 
-        <!-- Featured Products -->
-        <section class="featured-products py-5 bg-light">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">Sản phẩm nổi bật</h2>
-                <div class="row" id="featured-products-container">
-                    <!-- Products will be loaded dynamically here -->
-                </div>
-                <div class="text-center mt-4">
-                    <a href="products.html" class="btn btn-primary">Xem tất cả sản phẩm</a>
-                </div>
-            </div>
-        </section>
+
+                             <!-- Featured Products - Modified layout -->
+                <section class="featured-products py-5 bg-light">
+                    <div class="container">
+                        <h2 class="section-title text-center mb-5">Sản phẩm nổi bật</h2>
+                        <div class="row">
+                            <!-- Left side - Featured image (điều chỉnh responsive) -->
+                            <div class="col-lg-7 col-md-6 mb-4">
+                                <div class="featured-image h-100 position-relative rounded overflow-hidden">
+                                    <img src="image/banners/SanPhamNoiBat.png" alt="Sản phẩm nổi bật" class="img-fluid w-100 object-fit-cover">
+                                    <div class="position-absolute bottom-0 start-0 p-4 text-white">
+                                        <h3 class="fs-4 mb-2">Bộ sưu tập mới nhất</h3>
+                                        <a href="products.html?category=featured" class="btn btn-outline-light">Xem ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Right side - Products grid (điều chỉnh responsive) -->
+                            <div class="col-lg-5 col-md-6">
+                                <div class="row g-3" id="featured-products-container">
+                                    <!-- Product 1 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoPoloNike.png" alt="Áo Polo Nike" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Polo Nike</h5>
+                                            <div class="product-price mb-2">599.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 2 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoThunAdidas.png" alt="Áo Thun Adidas" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Thun Adidas</h5>
+                                            <div class="product-price mb-2">399.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 3 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoPoloNikeBlue.png" alt="Áo Polo Nike" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Polo Nike Blue</h5>
+                                            <div class="product-price mb-2">599.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 4 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoThunAdidasBlack.png" alt="Áo Thun Adidas" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Thun Adidas Black</h5>
+                                            <div class="product-price mb-2">399.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="products.html" class="btn btn-primary">Xem tất cả sản phẩm</a>
+                        </div>
+                    </div>
+                </section>
+        <!-- ...existing code... -->
 
         <!-- Trending Section -->
         <section class="trending-section py-5">
@@ -277,78 +359,86 @@
                 </div>
             </div>
         </section>
-
-        <!-- Testimonials -->
-        <section class="testimonials py-5 bg-light">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">Khách hàng nói gì về chúng tôi</h2>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="testimonial-card p-4 bg-white rounded shadow-sm h-100">
-                            <div class="stars mb-3">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                            <p class="mb-3">"Sản phẩm chất lượng tuyệt vời, giao hàng nhanh chóng, nhân viên tư vấn nhiệt tình. Tôi rất hài lòng!"</p>
-                            <div class="d-flex align-items-center">
-                                <div class="avatar me-3">
-                                    <img src="images/testimonials/avatar1.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Nguyễn Văn A</h6>
-                                    <small class="text-muted">Khách hàng thân thiết</small>
-                                </div>
-                            </div>
-                        </div>
+<!-- Testimonials with Video Background -->
+<section class="testimonials py-5 position-relative overflow-hidden">
+    <!-- Video Background -->
+    <div class="video-background position-absolute top-0 start-0 w-100 h-100">
+        <video class="w-100 h-100 object-fit-cover" autoplay muted loop>
+            <source src="videos/UQ_ST3_vn_imagesother_bratop_25SS_Bratop_PC_EN.mp4" type="video/mp4">
+        </video>
+        <!-- Overlay to make text more readable - giảm opacity xuống -->
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    </div>
+    
+    <div class="container position-relative py-5">
+        <h2 class="section-title text-center mb-5 text-white">Khách hàng nói gì về chúng tôi</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 bg-white bg-opacity-60 rounded shadow h-100">
+                    <div class="stars mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="testimonial-card p-4 bg-white rounded shadow-sm h-100">
-                            <div class="stars mb-3">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-half text-warning"></i>
-                            </div>
-                            <p class="mb-3">"Đồ đẹp, hợp xu hướng, giá cả phải chăng. Chắc chắn sẽ quay lại mua sắm nhiều lần nữa!"</p>
-                            <div class="d-flex align-items-center">
-                                <div class="avatar me-3">
-                                    <img src="images/testimonials/avatar2.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Trần Thị B</h6>
-                                    <small class="text-muted">Khách hàng mới</small>
-                                </div>
-                            </div>
+                    <p class="mb-3">"Sản phẩm chất lượng tuyệt vời, giao hàng nhanh chóng, nhân viên tư vấn nhiệt tình. Tôi rất hài lòng!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="images/testimonials/avatar1.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="testimonial-card p-4 bg-white rounded shadow-sm h-100">
-                            <div class="stars mb-3">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star text-warning"></i>
-                            </div>
-                            <p class="mb-3">"Chất lượng sản phẩm tốt, đúng như mô tả. Dịch vụ chăm sóc khách hàng tuyệt vời, sẽ ủng hộ tiếp!"</p>
-                            <div class="d-flex align-items-center">
-                                <div class="avatar me-3">
-                                    <img src="images/testimonials/avatar3.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
-                                </div>
-                                <div>
-                                    <h6 class="mb-0">Lê Văn C</h6>
-                                    <small class="text-muted">Khách hàng VIP</small>
-                                </div>
-                            </div>
+                        <div>
+                            <h6 class="mb-0">Nguyễn Văn A</h6>
+                            <small class="text-muted">Khách hàng thân thiết</small>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 bg-white bg-opacity-60 rounded shadow h-100">
+                    <div class="stars mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                    </div>
+                    <p class="mb-3">"Đồ đẹp, hợp xu hướng, giá cả phải chăng. Chắc chắn sẽ quay lại mua sắm nhiều lần nữa!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="images/testimonials/avatar2.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Trần Thị B</h6>
+                            <small class="text-muted">Khách hàng mới</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 bg-white bg-opacity-60 rounded shadow h-100">
+                    <div class="stars mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star text-warning"></i>
+                    </div>
+                    <p class="mb-3">"Chất lượng sản phẩm tốt, đúng như mô tả. Dịch vụ chăm sóc khách hàng tuyệt vời, sẽ ủng hộ tiếp!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="images/testimonials/avatar3.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Lê Văn C</h6>
+                            <small class="text-muted">Khách hàng VIP</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Newsletter -->
         <section class="newsletter py-5">

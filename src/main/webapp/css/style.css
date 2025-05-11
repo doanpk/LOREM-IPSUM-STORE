@@ -339,6 +339,78 @@ a:hover {
     font-weight: 700;
     margin-bottom: 1rem;
 }
+/* Horizontal Category Cards */
+.category-card-horizontal {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 220px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card-horizontal:hover {
+    transform: translateY(-5px);
+}
+
+.category-card-horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-overlay-horizontal {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.category-overlay-horizontal h5 {
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    margin-bottom: 8px;
+}
+
+.category-overlay-horizontal .btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .category-card-horizontal {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card-horizontal {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-card-horizontal {
+        height: 150px;
+    }
+    .category-overlay-horizontal {
+        padding: 10px;
+    }
+    .category-overlay-horizontal h5 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    .category-overlay-horizontal .btn-sm {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+    }
+}
 
 /* Featured Products */
 .featured-products {
@@ -406,6 +478,22 @@ a:hover {
     font-weight: 400;
     margin-right: 8px;
     font-size: 14px;
+}
+/* Thêm vào file CSS của bạn */
+.product-img-container {
+    height: 105px;
+    overflow: hidden;
+}
+
+.product-img-container img {
+    object-fit: cover;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .product-img-container {
+        height: 150px;
+    }
 }
 
 /* Trending Section */
@@ -633,4 +721,74 @@ a:hover {
 
 .animate-fade-in {
     animation: fadeIn 0.5s ease-out;
+}
+/* Video background cho phần testimonials */
+.testimonials {
+    min-height: 900px;
+}
+
+.video-background {
+    z-index: 0;
+}
+
+.video-background video {
+    object-fit: cover;
+}
+
+.video-background .overlay {
+    z-index: 1;
+    opacity: 0.4 !important; /* Giảm opacity của lớp overlay để thấy video rõ hơn */
+}
+
+.testimonials .container {
+    z-index: 2;
+}
+
+.testimonials .testimonial-card {
+    background-color: rgba(255, 255, 255, 0.4) !important; /* Giảm độ đậm của background */
+    backdrop-filter: blur(3px); /* Giảm mức độ blur */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.testimonials .testimonial-card:hover {
+    background-color: rgba(255, 255, 255, 0.65) !important; /* Tăng độ đậm khi hover */
+    backdrop-filter: blur(5px);
+}
+
+/* Tăng độ nổi bật của nội dung trong card */
+.testimonials .stars {
+    color: #ffc107;
+    font-size: 1.1rem;
+}
+
+.testimonials .testimonial-card p {
+    color: rgba(0, 0, 0, 0.75); /* Màu text đậm hơn để đọc được */
+    font-weight: 500;
+}
+
+/* Đảm bảo văn bản và nội dung luôn hiển thị rõ ràng trên nền video */
+.testimonials .section-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Thêm hiệu ứng glow nhẹ cho card khi hover */
+.testimonials .testimonial-card:hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Điều chỉnh màu sắc của avatar và thông tin khách hàng */
+.testimonials .avatar img {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.testimonials .testimonial-card h6 {
+    font-weight: 600;
+}
+
+.testimonials .text-muted {
+    color: rgba(0, 0, 0, 0.6) !important;
 }
