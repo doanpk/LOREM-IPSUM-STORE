@@ -200,4 +200,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Re-initialize on window resize
     window.addEventListener('resize', handleDropdownHover);
+    
+    // Thêm hiệu ứng co nhỏ header khi cuộn
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        const navbar = document.querySelector('.navbar');
+        
+        if (window.scrollY > 100) { // Khi cuộn xuống quá 100px
+            header.classList.add('header-shrink');
+            navbar.classList.add('navbar-shrink');
+        } else {
+            header.classList.remove('header-shrink');
+            navbar.classList.remove('navbar-shrink');
+        }
+    });
 });
