@@ -494,16 +494,22 @@ a:hover {
 
 .animate-fade-in {
     animation: fadeIn 0.5s ease-out;
-}/* Dropdown menu styling - Simple style like in the image */
+}
+
 .navbar-nav .dropdown-menu {
     border-radius: 0;
     margin-top: 0;
     padding: 0;
     min-width: 180px; /* Giảm kích thước xuống */
+    max-width: 240px; /* Thêm max-width để giới hạn độ rộng tối đa */
     border: 1px solid #eee;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 14px; /* Giảm kích thước chữ */
+    font-size: 14px;
+    width: auto; /* Thay đổi từ width: 100% thành width: auto */
+    left: auto; /* Thay đổi từ left: 0 thành left: auto */
+    right: auto; /* Thay đổi từ right: 0 thành right: auto */
 }
+
 
 .navbar-nav .dropdown-item {
     padding: 10px 15px; /* Padding nhỏ hơn */
@@ -563,7 +569,7 @@ a:hover {
 }
 /* Dropdown Menu Enhancement */
 .navbar-nav .nav-item.dropdown {
-    position: static;
+    position: relative;
 }
 
 .navbar-nav .dropdown-menu {
