@@ -153,3 +153,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 }); 
+// Enhance dropdown functionality for compact menus
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle dropdown hover on desktop
+    const handleDropdownHover = function() {
+        if (window.innerWidth >= 992) { // Only on desktop
+            const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('mouseenter', function() {
+                    // Close all other open dropdowns first
+                    document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                        if (!this.contains(menu)) {
+                            menu.classList.remove('show');
+                            menu.closest('.dropdown').classList.remove('show');
+                        }
+                    });
+                    
+                    // Open this dropdown
+                    this.classList.add('show');
+                    const menu = this.querySelector('.dropdown-menu');
+                    menu.classList.add('show');
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    this.classList.remove('show');
+                    const menu = this.querySelector('.dropdown-menu');
+                    menu.classList.remove('show');
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                        menu.classList.remove('show');
+                        menu.closest('.dropdown').classList.remove('show');
+                    });
+                }
+            });
+        }
+    };
+    
+    // Initialize
+    handleDropdownHover();
+    
+    // Re-initialize on window resize
+    window.addEventListener('resize', handleDropdownHover);
+});

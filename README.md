@@ -1,1 +1,1 @@
-# webproject1
+# LOREM-IPSUM-STORE

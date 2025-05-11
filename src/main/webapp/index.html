@@ -3,116 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store - Trang chủ</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>LOREM IPSUM - STORE</title>
+    <link rel="icon" href="image/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="container-fluid bg-danger text-white py-2">
+            <div class="d-flex justify-content-center align-items-center">
+                <i class="bi bi-bell me-2"></i>
+                <span>MIỄN PHÍ VẬN CHUYỂN ĐƠN HÀNG TỪ 299K</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Clothing Store</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Sản phẩm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="categories.html">Danh mục</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">Giới thiệu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Liên hệ</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <a href="cart.html" class="btn btn-outline-primary me-2">
-                            <i class="bi bi-cart"></i> Giỏ hàng
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-3 col-6">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="image/LOGO.png" height="40">
+                        LOREM IPSUM - STORE
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="search-button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- User Tools -->
+                <div class="col-md-3 col-6 text-end">
+                    <div class="header-tools">
+                        <a href="#" class="tool-icon" data-bs-toggle="tooltip" title="Tìm cửa hàng">
+                            <i class="bi bi-geo-alt"></i>
                         </a>
-                        <a href="login.html" class="btn btn-primary">Đăng nhập</a>
+                        <a href="account.html" class="tool-icon" data-bs-toggle="tooltip" title="Tài khoản">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <a href="cart.html" class="tool-icon position-relative" data-bs-toggle="tooltip" title="Giỏ hàng">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-badge">0</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+<!-- ...existing code... -->
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-top border-bottom">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto">
+                <!-- NEW COLLECTION -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="newCollectionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        NEW COLLECTION
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="newCollectionDropdown">
+                        <a class="dropdown-item" href="products.html?category=new-arrivals">JOHN HENRY</a>
+                        <a class="dropdown-item" href="products.html?category=bestsellers">FREELANCER</a>
+                    </div>
+                </li>
+                
+                <!-- JOHN HENRY -->
+                <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="johnHenryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        JOHN HENRY
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="johnHenryDropdown">
+        <!-- ÁO NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">ÁO NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                <li><a class="dropdown-item" href="#">Áo polo</a></li>
+            </ul>
+        </li>
+        <!-- QUẦN NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">QUẦN NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Quần jeans</a></li>
+                <li><a class="dropdown-item" href="#">Quần tây</a></li>
+                <li><a class="dropdown-item" href="#">Quần short</a></li>
+            </ul>
+        </li>
+        <!-- PHỤ KIỆN NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">PHỤ KIỆN NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Thắt lưng</a></li>
+                <li><a class="dropdown-item" href="#">Ví da</a></li>
+                <li><a class="dropdown-item" href="#">Nón</a></li>
+            </ul>
+        </li>
+        <!-- ONLINE ONLY không có submenu -->
+        <li>
+            <a class="dropdown-item" href="#">ONLINE ONLY</a>
+        </li>
+    </ul>
+</li>
+                
+                <!-- FREELANCER -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="freelancerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        FREELANCER
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="freelancerDropdown">
+                        <a class="dropdown-item" href="freelancer/ao-thun.html">ÁO THUN</a>
+                        <a class="dropdown-item" href="freelancer/ao-polo.html">ÁO POLO</a>
+                        <a class="dropdown-item" href="freelancer/ao-somi.html">ÁO SƠ MI</a>
+                        <a class="dropdown-item" href="freelancer/ao-khoac.html">ÁO KHOÁC</a>
+                        <a class="dropdown-item" href="freelancer/quan.html">QUẦN</a>
+                        <a class="dropdown-item" href="freelancer/phu-kien.html">PHỤ KIỆN</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">BLOG</a>
+                </li>
+                
+                <!-- CỬA HÀNG -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="storesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        CỬA HÀNG
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="storesDropdown">
+                        <a class="dropdown-item" href="stores.html?location=hcm">TP.HỒ CHÍ MINH</a>
+                        <a class="dropdown-item" href="stores.html?location=hn">HÀ NỘI</a>
+                        <a class="dropdown-item" href="stores.html?location=dn">ĐÀ NẴNG</a>
+                        <a class="dropdown-item" href="stores.html">TẤT CẢ CỬA HÀNG</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="uniformpro.html">UNIFORMPRO</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
     </header>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h1>Thời trang cho mọi người</h1>
-                        <p>Khám phá bộ sưu tập mới nhất của chúng tôi với những thiết kế độc đáo và chất lượng cao.</p>
-                        <a href="products.html" class="btn btn-primary">Mua sắm ngay</a>
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="hero-slider">
+                            <div class="hero-slide position-relative">
+                                <img src="image/banners/HOME.png" alt="New Arrivals" class="img-fluid w-100">
+                                <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
+                                    <h1 class="display-3 fw-bold mb-4">AN TOÀN<br>&<br>PHONG CÁCH</h1>
+                                    <a href="products.html?category=new" class="btn btn-light btn-lg">Khám phá ngay</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="images/hero-image.jpg" alt="Hero Image" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Highlights -->
+        <section class="category-highlights py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="category-card position-relative rounded overflow-hidden">
+                            <img src="image/banners/ThoiTrangNam.png" alt="Thời trang Nam" class="img-fluid w-100">
+                            <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
+                                <h3>Thời trang Nam</h3>
+                                <a href="products.html?category=men" class="btn btn-outline-light">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="category-card position-relative rounded overflow-hidden">
+                            <img src="image/banners/ThoiTrangNu.png" alt="Thời trang Nữ" class="img-fluid w-100">
+                            <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
+                                <h3>Thời trang Nữ</h3>
+                                <a href="products.html?category=women" class="btn btn-outline-light">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="category-card position-relative rounded overflow-hidden">
+                            <img src="image/banners/PhuKien.png" alt="Phụ kiện" class="img-fluid w-100">
+                            <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
+                                <h3>Phụ kiện</h3>
+                                <a href="products.html?category=accessories" class="btn btn-outline-light">Xem thêm</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Featured Products -->
-        <section class="featured-products">
+        <section class="featured-products py-5 bg-light">
             <div class="container">
-                <h2 class="section-title">Sản phẩm nổi bật</h2>
-                <div class="row">
-                    <!-- Product cards will be dynamically loaded here -->
+                <h2 class="section-title text-center mb-5">Sản phẩm nổi bật</h2>
+                <div class="row" id="featured-products-container">
+                    <!-- Products will be loaded dynamically here -->
+                </div>
+                <div class="text-center mt-4">
+                    <a href="products.html" class="btn btn-primary">Xem tất cả sản phẩm</a>
                 </div>
             </div>
         </section>
 
-        <!-- Categories -->
-        <section class="categories">
+        <!-- Trending Section -->
+        <section class="trending-section py-5">
             <div class="container">
-                <h2 class="section-title">Danh mục sản phẩm</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="image/banners/SummerCollection.png" alt="BST mùa hè" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-6 ps-md-5">
+                        <h2 class="display-6 mb-4">Bộ sưu tập mùa hè 2025</h2>
+                        <p class="lead mb-4">Khám phá những thiết kế mới nhất cho mùa hè sôi động với các sản phẩm chất lượng cao và phong cách độc đáo.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Chất liệu thoáng mát</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Thiết kế hiện đại</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Đa dạng màu sắc</li>
+                        </ul>
+                        <a href="products.html?collection=summer2025" class="btn btn-dark">Khám phá ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Khách hàng nói gì về chúng tôi</h2>
                 <div class="row">
-                    <!-- Category cards will be dynamically loaded here -->
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card p-4 bg-white rounded shadow-sm h-100">
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Sản phẩm chất lượng tuyệt vời, giao hàng nhanh chóng, nhân viên tư vấn nhiệt tình. Tôi rất hài lòng!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar me-3">
+                                    <img src="images/testimonials/avatar1.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Nguyễn Văn A</h6>
+                                    <small class="text-muted">Khách hàng thân thiết</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card p-4 bg-white rounded shadow-sm h-100">
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Đồ đẹp, hợp xu hướng, giá cả phải chăng. Chắc chắn sẽ quay lại mua sắm nhiều lần nữa!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar me-3">
+                                    <img src="images/testimonials/avatar2.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Trần Thị B</h6>
+                                    <small class="text-muted">Khách hàng mới</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="testimonial-card p-4 bg-white rounded shadow-sm h-100">
+                            <div class="stars mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Chất lượng sản phẩm tốt, đúng như mô tả. Dịch vụ chăm sóc khách hàng tuyệt vời, sẽ ủng hộ tiếp!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="avatar me-3">
+                                    <img src="images/testimonials/avatar3.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Lê Văn C</h6>
+                                    <small class="text-muted">Khách hàng VIP</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h3 class="mb-4">Đăng ký nhận tin</h3>
+                        <p class="mb-4">Nhận thông tin về sản phẩm mới và khuyến mãi hấp dẫn</p>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Email của bạn" required>
+                                <button class="btn btn-dark" type="submit">Đăng ký</button>
+                            </div>
+                            <div class="form-check text-start">
+                                <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                <label class="form-check-label small" for="privacyCheck">
+                                    Tôi đồng ý với <a href="privacy.html">chính sách bảo mật</a> và nhận email từ Clothing Store
+                                </label>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h5>Về chúng tôi</h5>
-                    <p>Clothing Store - Nơi bạn tìm thấy phong cách của riêng mình.</p>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-4">Clothing Store</h5>
+                    <p class="mb-4">Thời trang cho mọi người với thiết kế hiện đại và chất lượng hàng đầu.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h5>Liên kết nhanh</h5>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Mua sắm</h6>
                     <ul class="list-unstyled">
-                        <li><a href="about.html">Giới thiệu</a></li>
-                        <li><a href="contact.html">Liên hệ</a></li>
-                        <li><a href="privacy.html">Chính sách bảo mật</a></li>
-                        <li><a href="terms.html">Điều khoản sử dụng</a></li>
+                        <li class="mb-2"><a href="products.html?category=men" class="text-white text-decoration-none">Thời trang Nam</a></li>
+                        <li class="mb-2"><a href="products.html?category=women" class="text-white text-decoration-none">Thời trang Nữ</a></li>
+                        <li class="mb-2"><a href="products.html?category=accessories" class="text-white text-decoration-none">Phụ kiện</a></li>
+                        <li class="mb-2"><a href="sale.html" class="text-white text-decoration-none">Khuyến mãi</a></li>
+                        <li class="mb-2"><a href="new-arrivals.html" class="text-white text-decoration-none">Hàng mới về</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h5>Liên hệ</h5>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Thông tin</h6>
                     <ul class="list-unstyled">
-                        <li>Email: info@clothingstore.com</li>
-                        <li>Phone: (84) 123-456-789</li>
-                        <li>Địa chỉ: 123 Đường ABC, Quận XYZ, TP.HCM</li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">Về chúng tôi</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="stores.html" class="text-white text-decoration-none">Hệ thống cửa hàng</a></li>
                     </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Chính sách</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="policy-shipping.html" class="text-white text-decoration-none">Chính sách vận chuyển</a></li>
+                        <li class="mb-2"><a href="policy-return.html" class="text-white text-decoration-none">Chính sách đổi trả</a></li>
+                        <li class="mb-2"><a href="policy-payment.html" class="text-white text-decoration-none">Phương thức thanh toán</a></li>
+                        <li class="mb-2"><a href="policy-privacy.html" class="text-white text-decoration-none">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4 pt-3 border-top">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Clothing Store. Tất cả các quyền được bảo lưu.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="images/payment-methods.png" alt="Phương thức thanh toán" height="30">
                 </div>
             </div>
         </div>
     </footer>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top btn btn-dark" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Notification toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Thông báo</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Sản phẩm đã được thêm vào giỏ hàng!
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Back to top button functionality
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            
+            // Load featured products
+            loadFeaturedProducts();
+        });
+    </script>
 </body>
-</html> 
+</html>
