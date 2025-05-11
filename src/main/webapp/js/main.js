@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Re-initialize on window resize
     window.addEventListener('resize', handleDropdownHover);
+<<<<<<< HEAD
 });
 // Sticky header functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -266,3 +267,20 @@ document.addEventListener('DOMContentLoaded', function() {
         new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+=======
+    
+    // Thêm hiệu ứng co nhỏ header khi cuộn
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        const navbar = document.querySelector('.navbar');
+        
+        if (window.scrollY > 100) { // Khi cuộn xuống quá 100px
+            header.classList.add('header-shrink');
+            navbar.classList.add('navbar-shrink');
+        } else {
+            header.classList.remove('header-shrink');
+            navbar.classList.remove('navbar-shrink');
+        }
+    });
+});
+>>>>>>> e1ad98d04a4f84e8cac4cdbcbeca19b26cc7ed8b

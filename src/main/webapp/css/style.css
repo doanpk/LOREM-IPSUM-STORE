@@ -42,6 +42,12 @@ a:hover {
 /* Header Styles */
 .header {
     background-color: #fff;
+    position: sticky; /* Thêm position: sticky */
+    top: 0; /* Cố định ở vị trí top: 0 */
+    z-index: 1000; /* Đảm bảo header hiển thị trên các phần tử khác */
+    width: 100%; /* Đảm bảo chiều rộng 100% */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Thêm đổ bóng nhẹ để tạo chiều sâu */
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi scroll */
 }
 
 .navbar-brand {
@@ -80,6 +86,18 @@ a:hover {
     border: none;
     padding: 0 15px;
     color: #777;
+}
+
+/* Header shrink effect when scrolling */
+.header-shrink {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-shrink .navbar-nav .nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* User Tools */
