@@ -17,31 +17,69 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function to load featured products
+// Cập nhật hàm loadFeaturedProducts để xóa các sản phẩm cũ trước khi thêm mới
 function loadFeaturedProducts() {
-    // This would typically be an API call
-    const products = [
-        {
-            id: 1,
-            name: 'Áo Polo Nike',
-            price: '599.000đ',
-            image: 'images/products/polo-nike.jpg'
-        },
-        {
-            id: 2,
-            name: 'Áo Thun Adidas',
-            price: '399.000đ',
-            image: 'images/products/thun-adidas.jpg'
-        },
-        // Add more products as needed
-    ];
-
-    const productsContainer = document.querySelector('.featured-products .row');
-    if (productsContainer) {
+    // Xóa sạch các sản phẩm cũ trước khi load mới
+    const featuredProductsContainer = document.getElementById('featured-products-container');
+    if (featuredProductsContainer) {
+        featuredProductsContainer.innerHTML = ''; // Xóa toàn bộ nội dung cũ
+        
+        // Thêm sản phẩm mới từ API hoặc dữ liệu tĩnh
+        // Ví dụ:
+        const products = [
+            {
+                id: 1,
+                name: 'Áo Polo Nike',
+                price: '599.000đ',
+                image: 'image/products/AoPoloNike.png',
+            },
+            {
+                id: 2,
+                name: 'Áo Thun Adidas',
+                price: '399.000đ',
+                image: 'image/products/AoThunAdidas.png',
+            },
+            {
+                id: 3, 
+                name: 'Áo Polo Nike Blue',
+                price: '599.000đ',
+                image: 'image/products/AoPoloNikeBlue.png',
+            },
+            {
+                id: 4,
+                name: 'Áo Thun Adidas Black',
+                price: '399.000đ',
+                image: 'image/products/AoThunAdidasBlack.png',
+            }
+        ];
+        
+        // Thêm mỗi sản phẩm vào container
         products.forEach(product => {
-            const productCard = createProductCard(product);
-            productsContainer.appendChild(productCard);
+            const productHtml = `
+                <div class="col-6 col-md-6 col-lg-6 mb-4">
+                    <div class="product-card p-3 bg-white rounded shadow-sm h-100">
+                        <div class="product-img-container mb-3">
+                            <img src="${product.image}" alt="${product.name}" class="img-fluid w-100">
+                        </div>
+                        <h5 class="product-title">${product.name}</h5>
+                        <div class="product-price mb-3">${product.price}</div>
+                        <button class="btn btn-primary w-100" onclick="addToCart(${product.id})">THÊM VÀO GIỎ</button>
+                    </div>
+                </div>
+            `;
+            featuredProductsContainer.innerHTML += productHtml;
         });
     }
+}
+
+// Hàm bổ sung để xử lý thêm vào giỏ hàng
+function addToCart(productId) {
+    // Xử lý thêm sản phẩm vào giỏ hàng
+    console.log('Thêm sản phẩm ID:', productId, 'vào giỏ hàng');
+    
+    // Hiển thị thông báo
+    const toast = new bootstrap.Toast(document.getElementById('notificationToast'));
+    toast.show();
 }
 
 // Function to create product card
@@ -200,73 +238,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Re-initialize on window resize
     window.addEventListener('resize', handleDropdownHover);
-});
-// Sticky header functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.header');
-    const navbar = document.querySelector('.navbar');
-    const announcementBanner = document.querySelector('.announcement-banner');
-    const navbarHeight = navbar.offsetHeight;
-    const announcementHeight = announcementBanner ? announcementBanner.offsetHeight : 0;
-    let lastScrollTop = 0;
-    
-    // Clone navbar for sticky header
-    const stickyHeader = navbar.cloneNode(true);
-    stickyHeader.classList.add('sticky-header');
-    document.body.appendChild(stickyHeader);
-    
-    // Add padding to body
-    document.body.style.paddingTop = navbarHeight + 'px';
-    if (announcementBanner) {
-        document.body.classList.add('has-announcement');
-    }
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Tính toán vị trí để hiện sticky header
-        if (scrollTop > header.offsetHeight) {
-            if (scrollTop < lastScrollTop) {
-                // Cuộn lên
-                stickyHeader.classList.add('active');
-            } else {
-                // Cuộn xuống
-                stickyHeader.classList.remove('active');
-            }
-            
-            // Fix announcement banner nếu có
-            if (announcementBanner) {
-                if (scrollTop < announcementHeight) {
-                    announcementBanner.classList.remove('fixed');
-                    stickyHeader.style.top = '0';
-                } else {
-                    announcementBanner.classList.add('fixed');
-                    stickyHeader.style.top = announcementHeight + 'px';
-                }
-            }
-        } else {
-            stickyHeader.classList.remove('active');
-            if (announcementBanner) {
-                announcementBanner.classList.remove('fixed');
-            }
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-    
-    // Khởi tạo lại các dropdown trong sticky header
-    var dropdownElements = stickyHeader.querySelectorAll('.dropdown-toggle');
-    dropdownElements.forEach(function(element) {
-        element.setAttribute('data-bs-toggle', 'dropdown');
-    });
-    
-    // Khởi tạo lại tooltips trong sticky header
-    var tooltipTriggerList = [].slice.call(stickyHeader.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.forEach(function(tooltipTriggerEl) {
-        new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-});
-
     
     // Thêm hiệu ứng co nhỏ header khi cuộn
     window.addEventListener('scroll', function() {
@@ -281,4 +252,4 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('navbar-shrink');
         }
     });
-
+});
