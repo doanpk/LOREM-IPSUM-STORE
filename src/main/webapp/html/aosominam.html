@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo Sơ Mi - LOREM IPSUM - STORE</title>
+    <link rel="icon" href="../image/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/aosominam.css">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="container-fluid bg-danger text-white py-2">
+            <div class="d-flex justify-content-center align-items-center">
+                <i class="bi bi-bell me-2"></i>
+                <span>MIỄN PHÍ VẬN CHUYỂN ĐƠN HÀNG TỪ 299K</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-3 col-6">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../image/LOGO.png" height="40">
+                        LOREM IPSUM - STORE
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="search-button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- User Tools -->
+                <div class="col-md-3 col-6 text-end">
+                    <div class="header-tools">
+                        <a href="#" class="tool-icon" data-bs-toggle="tooltip" title="Tìm cửa hàng">
+                            <i class="bi bi-geo-alt"></i>
+                        </a>
+                        <a href="../account.html" class="tool-icon" data-bs-toggle="tooltip" title="Tài khoản">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <a href="../cart.html" class="tool-icon position-relative" data-bs-toggle="tooltip" title="Giỏ hàng">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-top border-bottom">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- NEW COLLECTION -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="newCollectionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                NEW COLLECTION
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="newCollectionDropdown">
+                                <a class="dropdown-item" href="../products.html?category=new-arrivals">JOHN HENRY</a>
+                                <a class="dropdown-item" href="../products.html?category=bestsellers">FREELANCER</a>
+                            </div>
+                        </li>
+                        
+                        <!-- JOHN HENRY -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="johnHenryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                JOHN HENRY
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="johnHenryDropdown">
+                                <!-- ÁO NAM có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">ÁO NAM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                                        <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                                        <li><a class="dropdown-item" href="#">Áo polo</a></li>
+                                    </ul>
+                                </li>
+                                <!-- QUẦN NAM có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">QUẦN NAM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Quần jeans</a></li>
+                                        <li><a class="dropdown-item" href="#">Quần tây</a></li>
+                                        <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                    </ul>
+                                </li>
+                                <!-- PHỤ KIỆN NAM có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">PHỤ KIỆN NAM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Thắt lưng</a></li>
+                                        <li><a class="dropdown-item" href="#">Ví da</a></li>
+                                        <li><a class="dropdown-item" href="#">Nón</a></li>
+                                    </ul>
+                                </li>
+                                <!-- ONLINE ONLY không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="#">ONLINE ONLY</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- FREELANCER -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="freelancerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                FREELANCER
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="freelancerDropdown">
+                                <!-- ĐẦM không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="../freelancer/dam.html">ĐẦM</a>
+                                </li>
+                                <!-- CHÂN VÁY không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="../freelancer/chan-vay.html">CHÂN VÁY</a>
+                                </li>
+                                <!-- ÁO NỮ có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">ÁO NỮ</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../freelancer/ao/blouse.html">ÁO BLOUSE</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/t-shirt.html">ÁO T-SHIRT</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/so-mi.html">ÁO SƠ MI</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/polo.html">ÁO POLO</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/blazer.html">ÁO BLAZER</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/len.html">ÁO LEN</a></li>
+                                    </ul>
+                                </li>
+                                <!-- QUẦN NỮ có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">QUẦN NỮ</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../freelancer/quan/jeans.html">QUẦN JEANS</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/quan/tay.html">QUẦN TÂY</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/quan/short.html">QUẦN SHORT</a></li>
+                                    </ul>
+                                </li>
+                                <!-- PHỤ KIỆN NỮ không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="../freelancer/phu-kien.html">PHỤ KIỆN NỮ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blog.html">BLOG</a>
+                        </li>
+                        
+                        <!-- CỬA HÀNG -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="storesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                CỬA HÀNG
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="storesDropdown">
+                                <a class="dropdown-item" href="../stores.html?location=hcm">TP.HỒ CHÍ MINH</a>
+                                <a class="dropdown-item" href="../stores.html?location=hn">HÀ NỘI</a>
+                                <a class="dropdown-item" href="../stores.html?location=dn">ĐÀ NẴNG</a>
+                                <a class="dropdown-item" href="../stores.html">TẤT CẢ CỬA HÀNG</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../uniformpro.html">UNIFORMPRO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Nội dung trang áo sơ mi nam sẽ được đặt ở đây -->
+        <section class="product-banner position-relative">
+            <div class="container-fluid p-0">
+                <div class="banner-image">
+                    <img src="../image/banners/ao-so-mi-nam-banner.png" alt="Áo Sơ Mi Nam" class="img-fluid w-100">
+                    <div class="banner-overlay">
+                        <div class="container">
+                            <!-- <h1 class="banner-title text-white text-center">ÁO SƠ MI</h1> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters & Sorting -->
+        <section class="product-filters py-3 border-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-md-0">Hiển thị 1–24 trong số 36 kết quả</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="d-flex justify-content-md-end align-items-center">
+                            <label for="sort-select" class="me-2 mb-0">Sắp xếp:</label>
+                            <select id="sort-select" class="form-select form-select-sm" style="width: auto;">
+                                <option value="default">Mặc định</option>
+                                <option value="price-asc">Giá: Thấp đến cao</option>
+                                <option value="price-desc">Giá: Cao đến thấp</option>
+                                <option value="name-asc">Tên: A-Z</option>
+                                <option value="name-desc">Tên: Z-A</option>
+                                <option value="newest">Mới nhất</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="product-grid py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar Filters -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="filters-sidebar">
+                            <!-- Filter by Price -->
+                            <div class="filter-group mb-4">
+                                <h5 class="filter-title">Giá</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price-1">
+                                    <label class="form-check-label" for="price-1">Dưới 300.000₫</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price-2">
+                                    <label class="form-check-label" for="price-2">300.000₫ - 500.000₫</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price-3">
+                                    <label class="form-check-label" for="price-3">500.000₫ - 800.000₫</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price-4">
+                                    <label class="form-check-label" for="price-4">Trên 800.000₫</label>
+                                </div>
+                            </div>
+
+                            <!-- Filter by Color -->
+                            <div class="filter-group mb-4">
+                                <h5 class="filter-title">Màu sắc</h5>
+                                <div class="color-options">
+                                    <div class="color-option" style="background-color: #ffffff;" title="Trắng"></div>
+                                    <div class="color-option" style="background-color: #000000;" title="Đen"></div>
+                                    <div class="color-option" style="background-color: #2d3e50;" title="Xanh đậm"></div>
+                                    <div class="color-option" style="background-color: #3498db;" title="Xanh nhạt"></div>
+                                    <div class="color-option" style="background-color: #e74c3c;" title="Đỏ"></div>
+                                    <div class="color-option" style="background-color: #f1c40f;" title="Vàng"></div>
+                                    <div class="color-option" style="background-color: #2ecc71;" title="Xanh lá"></div>
+                                    <div class="color-option" style="background-color: #9b59b6;" title="Tím"></div>
+                                </div>
+                            </div>
+
+                            <!-- Filter by Size -->
+                            <div class="filter-group mb-4">
+                                <h5 class="filter-title">Kích thước</h5>
+                                <div class="size-options">
+                                    <div class="size-option">S</div>
+                                    <div class="size-option">M</div>
+                                    <div class="size-option">L</div>
+                                    <div class="size-option">XL</div>
+                                    <div class="size-option">XXL</div>
+                                </div>
+                            </div>
+
+                            <!-- Filter by Material -->
+                            <div class="filter-group mb-4">
+                                <h5 class="filter-title">Chất liệu</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="material-1">
+                                    <label class="form-check-label" for="material-1">Cotton</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="material-2">
+                                    <label class="form-check-label" for="material-2">Linen</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="material-3">
+                                    <label class="form-check-label" for="material-3">Polyester</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="material-4">
+                                    <label class="form-check-label" for="material-4">Lụa</label>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-primary w-100">Lọc sản phẩm</button>
+                        </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-lg-9">
+                        <div class="row products-container">
+                            <!-- Product 1 -->
+                            <div class="col-md-4 col-6 mb-4">
+                                <div class="product-card">
+                                    <div class="product-badge bg-danger text-white">-15%</div>
+                                    <a href="product-detail.html?id=sm001" class="product-link">
+                                        <img src="../image/products/ao-so-mi-1.jpg" alt="Áo Sơ Mi Nam Kẻ Sọc" class="img-fluid">
+                                        <div class="product-info p-3">
+                                            <h5 class="product-title">Áo Sơ Mi Nam Kẻ Sọc</h5>
+                                            <div class="product-price">
+                                                <span class="current-price">425.000₫</span>
+                                                <span class="original-price">500.000₫</span>
+                                            </div>
+                                            <div class="product-colors mt-2">
+                                                <span class="color-dot" style="background-color: #2d3e50;"></span>
+                                                <span class="color-dot" style="background-color: #e74c3c;"></span>
+                                                <span class="color-dot" style="background-color: #ffffff; border: 1px solid #ddd;"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="btn btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-id="sm001">
+                                            <i class="bi bi-eye"></i> Xem nhanh
+                                        </button>
+                                        <button class="btn btn-sm add-to-cart" data-id="sm001">
+                                            <i class="bi bi-bag-plus"></i> Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="col-md-4 col-6 mb-4">
+                                <div class="product-card">
+                                    <div class="product-badge bg-success text-white">Mới</div>
+                                    <a href="product-detail.html?id=sm002" class="product-link">
+                                        <img src="../image/products/ao-so-mi-2.jpg" alt="Áo Sơ Mi Nam Oxford" class="img-fluid">
+                                        <div class="product-info p-3">
+                                            <h5 class="product-title">Áo Sơ Mi Nam Oxford</h5>
+                                            <div class="product-price">
+                                                <span class="current-price">450.000₫</span>
+                                            </div>
+                                            <div class="product-colors mt-2">
+                                                <span class="color-dot" style="background-color: #3498db;"></span>
+                                                <span class="color-dot" style="background-color: #ffffff; border: 1px solid #ddd;"></span>
+                                                <span class="color-dot" style="background-color: #f1c40f;"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="btn btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-id="sm002">
+                                            <i class="bi bi-eye"></i> Xem nhanh
+                                        </button>
+                                        <button class="btn btn-sm add-to-cart" data-id="sm002">
+                                            <i class="bi bi-bag-plus"></i> Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="col-md-4 col-6 mb-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html?id=sm003" class="product-link">
+                                        <img src="../image/products/ao-so-mi-3.jpg" alt="Áo Sơ Mi Nam Linen" class="img-fluid">
+                                        <div class="product-info p-3">
+                                            <h5 class="product-title">Áo Sơ Mi Nam Linen</h5>
+                                            <div class="product-price">
+                                                <span class="current-price">550.000₫</span>
+                                            </div>
+                                            <div class="product-colors mt-2">
+                                                <span class="color-dot" style="background-color: #ffffff; border: 1px solid #ddd;"></span>
+                                                <span class="color-dot" style="background-color: #f1c40f;"></span>
+                                                <span class="color-dot" style="background-color: #2ecc71;"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="btn btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-id="sm003">
+                                            <i class="bi bi-eye"></i> Xem nhanh
+                                        </button>
+                                        <button class="btn btn-sm add-to-cart" data-id="sm003">
+                                            <i class="bi bi-bag-plus"></i> Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="col-md-4 col-6 mb-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html?id=sm004" class="product-link">
+                                        <img src="../image/products/ao-so-mi-4.jpg" alt="Áo Sơ Mi Nam Họa Tiết" class="img-fluid">
+                                        <div class="product-info p-3">
+                                            <h5 class="product-title">Áo Sơ Mi Nam Họa Tiết</h5>
+                                            <div class="product-price">
+                                                <span class="current-price">480.000₫</span>
+                                            </div>
+                                            <div class="product-colors mt-2">
+                                                <span class="color-dot" style="background-color: #2d3e50;"></span>
+                                                <span class="color-dot" style="background-color: #9b59b6;"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="btn btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-id="sm004">
+                                            <i class="bi bi-eye"></i> Xem nhanh
+                                        </button>
+                                        <button class="btn btn-sm add-to-cart" data-id="sm004">
+                                            <i class="bi bi-bag-plus"></i> Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 5 -->
+                            <div class="col-md-4 col-6 mb-4">
+                                <div class="product-card">
+                                    <div class="product-badge bg-danger text-white">-20%</div>
+                                    <a href="product-detail.html?id=sm005" class="product-link">
+                                        <img src="../image/products/ao-so-mi-5.jpg" alt="Áo Sơ Mi Nam Cotton" class="img-fluid">
+                                        <div class="product-info p-3">
+                                            <h5 class="product-title">Áo Sơ Mi Nam Cotton</h5>
+                                            <div class="product-price">
+                                                <span class="current-price">400.000₫</span>
+                                                <span class="original-price">500.000₫</span>
+                                            </div>
+                                            <div class="product-colors mt-2">
+                                                <span class="color-dot" style="background-color: #ffffff; border: 1px solid #ddd;"></span>
+                                                <span class="color-dot" style="background-color: #3498db;"></span>
+                                                <span class="color-dot" style="background-color: #000000;"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="btn btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-id="sm005">
+                                            <i class="bi bi-eye"></i> Xem nhanh
+                                        </button>
+                                        <button class="btn btn-sm add-to-cart" data-id="sm005">
+                                            <i class="bi bi-bag-plus"></i> Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 6 -->
+                            <div class="col-md-4 col-6 mb-4">
+                                <div class="product-card">
+                                    <div class="product-badge bg-success text-white">Mới</div>
+                                    <a href="product-detail.html?id=sm006" class="product-link">
+                                        <img src="../image/products/ao-so-mi-6.jpg" alt="Áo Sơ Mi Nam Denim" class="img-fluid">
+                                        <div class="product-info p-3">
+                                            <h5 class="product-title">Áo Sơ Mi Nam Denim</h5>
+                                            <div class="product-price">
+                                                <span class="current-price">520.000₫</span>
+                                            </div>
+                                            <div class="product-colors mt-2">
+                                                <span class="color-dot" style="background-color: #3498db;"></span>
+                                                <span class="color-dot" style="background-color: #2d3e50;"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="product-actions">
+                                        <button class="btn btn-sm quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-id="sm006">
+                                            <i class="bi bi-eye"></i> Xem nhanh
+                                        </button>
+                                        <button class="btn btn-sm add-to-cart" data-id="sm006">
+                                            <i class="bi bi-bag-plus"></i> Thêm vào giỏ
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav class="mt-5">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <span class="page-link">Trước</span>
+                                </li>
+                                <li class="page-item active">
+                                    <span class="page-link">1</span>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Sau</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick View Modal -->
+        <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Xem nhanh sản phẩm</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="../image/products/ao-so-mi-1.jpg" class="img-fluid" id="quickViewImage" alt="Product">
+                            </div>
+                            <div class="col-md-6">
+                                <h3 id="quickViewTitle">Áo Sơ Mi Nam Kẻ Sọc</h3>
+                                <div class="price-container mb-3">
+                                    <span class="current-price h4" id="quickViewPrice">425.000₫</span>
+                                    <span class="original-price text-muted text-decoration-line-through" id="quickViewOriginalPrice">500.000₫</span>
+                                </div>
+                                <p id="quickViewDescription">Áo sơ mi nam kẻ sọc kiểu dáng slim fit, chất liệu cotton thoáng mát. Phù hợp với nhiều phong cách khác nhau từ công sở đến dạo phố.</p>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Màu sắc:</label>
+                                    <div class="color-options">
+                                        <div class="color-option selected" style="background-color: #2d3e50;" title="Xanh đậm"></div>
+                                        <div class="color-option" style="background-color: #e74c3c;" title="Đỏ"></div>
+                                        <div class="color-option" style="background-color: #ffffff; border: 1px solid #ddd;" title="Trắng"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Kích thước:</label>
+                                    <div class="size-options">
+                                        <div class="size-option">S</div>
+                                        <div class="size-option selected">M</div>
+                                        <div class="size-option">L</div>
+                                        <div class="size-option">XL</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Số lượng:</label>
+                                    <div class="quantity-selector">
+                                        <button class="btn btn-sm btn-outline-secondary quantity-decrease">-</button>
+                                        <input type="number" class="form-control" value="1" min="1" max="10">
+                                        <button class="btn btn-sm btn-outline-secondary quantity-increase">+</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" id="quickViewAddToCart">
+                                        <i class="bi bi-bag-plus"></i> Thêm vào giỏ hàng
+                                    </button>
+                                    <a href="product-detail.html" class="btn btn-outline-secondary" id="quickViewDetails">
+                                        Xem chi tiết
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-4">Clothing Store</h5>
+                    <p class="mb-4">Thời trang cho mọi người với thiết kế hiện đại và chất lượng hàng đầu.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Mua sắm</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../products.html?category=men" class="text-white text-decoration-none">Thời trang Nam</a></li>
+                        <li class="mb-2"><a href="../products.html?category=women" class="text-white text-decoration-none">Thời trang Nữ</a></li>
+                        <li class="mb-2"><a href="../products.html?category=accessories" class="text-white text-decoration-none">Phụ kiện</a></li>
+                        <li class="mb-2"><a href="../sale.html" class="text-white text-decoration-none">Khuyến mãi</a></li>
+                        <li class="mb-2"><a href="../new-arrivals.html" class="text-white text-decoration-none">Hàng mới về</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Thông tin</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../about.html" class="text-white text-decoration-none">Về chúng tôi</a></li>
+                        <li class="mb-2"><a href="../contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                        <li class="mb-2"><a href="../blog.html" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="../faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="../stores.html" class="text-white text-decoration-none">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Chính sách</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../policy-shipping.html" class="text-white text-decoration-none">Chính sách vận chuyển</a></li>
+                        <li class="mb-2"><a href="../policy-return.html" class="text-white text-decoration-none">Chính sách đổi trả</a></li>
+                        <li class="mb-2"><a href="../policy-payment.html" class="text-white text-decoration-none">Phương thức thanh toán</a></li>
+                        <li class="mb-2"><a href="../policy-privacy.html" class="text-white text-decoration-none">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4 pt-3 border-top">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Clothing Store. Tất cả các quyền được bảo lưu.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="../images/payment-methods.png" alt="Phương thức thanh toán" height="30">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top btn btn-dark" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Notification toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Thông báo</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Sản phẩm đã được thêm vào giỏ hàng!
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Back to top button functionality
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+        });
+    </script>
+</body>
+</html>
