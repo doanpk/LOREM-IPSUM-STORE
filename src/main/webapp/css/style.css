@@ -697,25 +697,7 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Back to top button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    opacity: 0.7;
-    display: none;
-}
 
-.back-to-top:hover {
-    opacity: 1;
-}
 
 /* Buttons */
 .btn {
@@ -981,5 +963,107 @@ a:hover {
     
     .testimonials {
         min-height: 600px;
+    }
+}
+/* Floating contact logos đẹp hơn */
+.contact-floating {
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    border: 2.5px solid #e3e3e3;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+}
+
+.contact-logo img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+.contact-logo.contact-zalo {
+    border-color: #008fe5;
+}
+.contact-logo.contact-messenger {
+    border-color: #00b2ff;
+}
+
+.contact-logo:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+
+@media (max-width: 768px) {
+    .contact-floating {
+        right: 10px;
+        bottom: 70px;
+        gap: 10px;
+    }
+    .contact-logo {
+        width: 44px;
+        height: 44px;
+    }
+    .contact-logo img {
+        width: 28px;
+        height: 28px;
+    }
+}
+/* Nút back-to-top nổi tròn như contact-logo */
+.contact-logo.back-to-top {
+    border-color: #00b2ff;
+}
+.contact-floating .back-to-top {
+    background: #fff;
+    color: #222;
+    border-color: #00b2ff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+    margin-top: 0;
+}
+.contact-floating .back-to-top:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+.contact-floating .back-to-top i {
+    display: block;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px; /* Đẩy icon xuống dưới cho cân giữa */
+    left: 11px;
+}
+@media (max-width: 768px) {
+    .contact-floating .back-to-top i {
+        font-size: 1.1rem;
+        top: 2px; /* Đẩy xuống ít hơn trên mobile */
     }
 }
