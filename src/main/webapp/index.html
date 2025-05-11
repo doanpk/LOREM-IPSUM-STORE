@@ -83,16 +83,43 @@
                 
                 <!-- JOHN HENRY -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="johnHenryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        JOHN HENRY
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="johnHenryDropdown">
-                        <a class="dropdown-item" href="john-henry/ao.html">ÁO NAM <i class="bi bi-chevron-right float-end"></i></a>
-                        <a class="dropdown-item" href="john-henry/quan.html">QUẦN NAM <i class="bi bi-chevron-right float-end"></i></a>
-                        <a class="dropdown-item" href="john-henry/phu-kien.html">PHỤ KIỆN NAM <i class="bi bi-chevron-right float-end"></i></a>
-                        <a class="dropdown-item" href="john-henry/online-only.html">ONLINE ONLY</a>
-                    </div>
-                </li>
+    <a class="nav-link dropdown-toggle" href="#" id="johnHenryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        JOHN HENRY
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="johnHenryDropdown">
+        <!-- ÁO NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">ÁO NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                <li><a class="dropdown-item" href="#">Áo polo</a></li>
+            </ul>
+        </li>
+        <!-- QUẦN NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">QUẦN NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Quần jeans</a></li>
+                <li><a class="dropdown-item" href="#">Quần tây</a></li>
+                <li><a class="dropdown-item" href="#">Quần short</a></li>
+            </ul>
+        </li>
+        <!-- PHỤ KIỆN NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">PHỤ KIỆN NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Thắt lưng</a></li>
+                <li><a class="dropdown-item" href="#">Ví da</a></li>
+                <li><a class="dropdown-item" href="#">Nón</a></li>
+            </ul>
+        </li>
+        <!-- ONLINE ONLY không có submenu -->
+        <li>
+            <a class="dropdown-item" href="#">ONLINE ONLY</a>
+        </li>
+    </ul>
+</li>
                 
                 <!-- FREELANCER -->
                 <li class="nav-item dropdown">
@@ -162,7 +189,7 @@
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <div class="category-card position-relative rounded overflow-hidden">
-                            <img src="image/products/JeansNamFormVua.png" alt="Thời trang Nam" class="img-fluid w-100">
+                            <img src="image/banners/ThoiTrangNam.png" alt="Thời trang Nam" class="img-fluid w-100">
                             <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
                                 <h3>Thời trang Nam</h3>
                                 <a href="products.html?category=men" class="btn btn-outline-light">Xem thêm</a>
@@ -171,7 +198,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="category-card position-relative rounded overflow-hidden">
-                            <img src="images/categories/women.jpg" alt="Thời trang Nữ" class="img-fluid w-100">
+                            <img src="image/banners/ThoiTrangNu.png" alt="Thời trang Nữ" class="img-fluid w-100">
                             <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
                                 <h3>Thời trang Nữ</h3>
                                 <a href="products.html?category=women" class="btn btn-outline-light">Xem thêm</a>
@@ -180,7 +207,7 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="category-card position-relative rounded overflow-hidden">
-                            <img src="images/categories/accessories.jpg" alt="Phụ kiện" class="img-fluid w-100">
+                            <img src="image/banners/PhuKien.png" alt="Phụ kiện" class="img-fluid w-100">
                             <div class="category-overlay position-absolute start-0 bottom-0 end-0 p-4 text-white">
                                 <h3>Phụ kiện</h3>
                                 <a href="products.html?category=accessories" class="btn btn-outline-light">Xem thêm</a>
@@ -209,7 +236,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="images/trending-collection.jpg" alt="BST mùa hè" class="img-fluid rounded shadow">
+                        <img src="image/banners/SummerCollection.png" alt="BST mùa hè" class="img-fluid rounded shadow">
                     </div>
                     <div class="col-md-6 ps-md-5">
                         <h2 class="display-6 mb-4">Bộ sưu tập mùa hè 2025</h2>
