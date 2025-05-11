@@ -201,3 +201,68 @@ document.addEventListener('DOMContentLoaded', function() {
     // Re-initialize on window resize
     window.addEventListener('resize', handleDropdownHover);
 });
+// Sticky header functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
+    const navbar = document.querySelector('.navbar');
+    const announcementBanner = document.querySelector('.announcement-banner');
+    const navbarHeight = navbar.offsetHeight;
+    const announcementHeight = announcementBanner ? announcementBanner.offsetHeight : 0;
+    let lastScrollTop = 0;
+    
+    // Clone navbar for sticky header
+    const stickyHeader = navbar.cloneNode(true);
+    stickyHeader.classList.add('sticky-header');
+    document.body.appendChild(stickyHeader);
+    
+    // Add padding to body
+    document.body.style.paddingTop = navbarHeight + 'px';
+    if (announcementBanner) {
+        document.body.classList.add('has-announcement');
+    }
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Tính toán vị trí để hiện sticky header
+        if (scrollTop > header.offsetHeight) {
+            if (scrollTop < lastScrollTop) {
+                // Cuộn lên
+                stickyHeader.classList.add('active');
+            } else {
+                // Cuộn xuống
+                stickyHeader.classList.remove('active');
+            }
+            
+            // Fix announcement banner nếu có
+            if (announcementBanner) {
+                if (scrollTop < announcementHeight) {
+                    announcementBanner.classList.remove('fixed');
+                    stickyHeader.style.top = '0';
+                } else {
+                    announcementBanner.classList.add('fixed');
+                    stickyHeader.style.top = announcementHeight + 'px';
+                }
+            }
+        } else {
+            stickyHeader.classList.remove('active');
+            if (announcementBanner) {
+                announcementBanner.classList.remove('fixed');
+            }
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+    
+    // Khởi tạo lại các dropdown trong sticky header
+    var dropdownElements = stickyHeader.querySelectorAll('.dropdown-toggle');
+    dropdownElements.forEach(function(element) {
+        element.setAttribute('data-bs-toggle', 'dropdown');
+    });
+    
+    // Khởi tạo lại tooltips trong sticky header
+    var tooltipTriggerList = [].slice.call(stickyHeader.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function(tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
