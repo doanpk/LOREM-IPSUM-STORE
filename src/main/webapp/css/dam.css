@@ -1,6 +1,3 @@
-:root {
-    --primary-color: #c73133;
-}
 /* Announcement Banner */
 .announcement-banner {
     background-color: var(--primary-color);
