@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo Blouse - LOREM IPSUM - STORE</title>
+    <link rel="icon" href="../image/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="container-fluid bg-danger text-white py-2">
+            <div class="d-flex justify-content-center align-items-center">
+                <i class="bi bi-bell me-2"></i>
+                <span>MIỄN PHÍ VẬN CHUYỂN ĐƠN HÀNG TỪ 299K</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-3 col-6">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../image/LOGO.png" height="40">
+                        LOREM IPSUM - STORE
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="search-button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- User Tools -->
+                <div class="col-md-3 col-6 text-end">
+                    <div class="header-tools">
+                        <a href="#" class="tool-icon" data-bs-toggle="tooltip" title="Tìm cửa hàng">
+                            <i class="bi bi-geo-alt"></i>
+                        </a>
+                        <a href="../account.html" class="tool-icon" data-bs-toggle="tooltip" title="Tài khoản">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <a href="../cart.html" class="tool-icon position-relative" data-bs-toggle="tooltip" title="Giỏ hàng">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-top border-bottom">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- NEW COLLECTION -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="newCollectionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                NEW COLLECTION
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="newCollectionDropdown">
+                                <a class="dropdown-item" href="../products.html?category=new-arrivals">JOHN HENRY</a>
+                                <a class="dropdown-item" href="../products.html?category=bestsellers">FREELANCER</a>
+                            </div>
+                        </li>
+                        
+                        <!-- JOHN HENRY -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="johnHenryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                JOHN HENRY
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="johnHenryDropdown">
+                                <!-- ÁO NAM có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">ÁO NAM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                                        <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                                        <li><a class="dropdown-item" href="#">Áo polo</a></li>
+                                    </ul>
+                                </li>
+                                <!-- QUẦN NAM có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">QUẦN NAM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Quần jeans</a></li>
+                                        <li><a class="dropdown-item" href="#">Quần tây</a></li>
+                                        <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                    </ul>
+                                </li>
+                                <!-- PHỤ KIỆN NAM có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">PHỤ KIỆN NAM</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Thắt lưng</a></li>
+                                        <li><a class="dropdown-item" href="#">Ví da</a></li>
+                                        <li><a class="dropdown-item" href="#">Nón</a></li>
+                                    </ul>
+                                </li>
+                                <!-- ONLINE ONLY không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="#">ONLINE ONLY</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- FREELANCER -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="freelancerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                FREELANCER
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="freelancerDropdown">
+                                <!-- ĐẦM không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="../freelancer/dam.html">ĐẦM</a>
+                                </li>
+                                <!-- CHÂN VÁY không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="../freelancer/chan-vay.html">CHÂN VÁY</a>
+                                </li>
+                                <!-- ÁO NỮ có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">ÁO NỮ</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../freelancer/ao/blouse.html">ÁO BLOUSE</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/t-shirt.html">ÁO T-SHIRT</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/so-mi.html">ÁO SƠ MI</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/polo.html">ÁO POLO</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/blazer.html">ÁO BLAZER</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/ao/len.html">ÁO LEN</a></li>
+                                    </ul>
+                                </li>
+                                <!-- QUẦN NỮ có submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">QUẦN NỮ</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="../freelancer/quan/jeans.html">QUẦN JEANS</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/quan/tay.html">QUẦN TÂY</a></li>
+                                        <li><a class="dropdown-item" href="../freelancer/quan/short.html">QUẦN SHORT</a></li>
+                                    </ul>
+                                </li>
+                                <!-- PHỤ KIỆN NỮ không có submenu -->
+                                <li>
+                                    <a class="dropdown-item" href="../freelancer/phu-kien.html">PHỤ KIỆN NỮ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blog.html">BLOG</a>
+                        </li>
+                        
+                        <!-- CỬA HÀNG -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="storesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                CỬA HÀNG
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="storesDropdown">
+                                <a class="dropdown-item" href="../stores.html?location=hcm">TP.HỒ CHÍ MINH</a>
+                                <a class="dropdown-item" href="../stores.html?location=hn">HÀ NỘI</a>
+                                <a class="dropdown-item" href="../stores.html?location=dn">ĐÀ NẴNG</a>
+                                <a class="dropdown-item" href="../stores.html">TẤT CẢ CỬA HÀNG</a>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="../uniformpro.html">UNIFORMPRO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+<!-- Banner -->
+<section class="banner">
+    <div class="container-fluid p-0">
+        <img src="../image/banners/sieunhan.png" alt="Áo Blouse Banner" class="img-fluid w-100">
+    </div>
+</section>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb py-3 mb-0">
+                    <li class="breadcrumb-item"><a href="../../index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="../../freelancer.html">FREELANCER</a></li>
+                    <li class="breadcrumb-item"><a href="#">Áo nữ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Áo blouse nữ</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Danh sách sản phẩm -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Title and Filters -->
+            <div class="product-header">
+                <h1 class="collection-title">Áo Blouse Nữ FREELANCER</h1>
+                <div class="collection-filters">
+                    <div class="filter-section">
+                        <button class="filters-toggle btn btn-outline-secondary mb-0 mb-md-2 d-lg-none">
+                            <i class="bi bi-funnel me-2"></i>Bộ lọc
+                        </button>
+                        <div class="dropdown d-inline-block ms-2">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sắp xếp
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                                <li><a class="dropdown-item active" href="#">Mặc định</a></li>
+                                <li><a class="dropdown-item" href="#">A-Z</a></li>
+                                <li><a class="dropdown-item" href="#">Z-A</a></li>
+                                <li><a class="dropdown-item" href="#">Giá thấp đến cao</a></li>
+                                <li><a class="dropdown-item" href="#">Giá cao đến thấp</a></li>
+                                <li><a class="dropdown-item" href="#">Mới nhất</a></li>
+                                <li><a class="dropdown-item" href="#">Cũ nhất</a></li>
+                                <li><a class="dropdown-item" href="#">Bán chạy nhất</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="row">
+                <!-- Sidebar Filters (hidden on mobile) -->
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="filters-sidebar">
+                        <div class="filter-group">
+                            <h5>Giá</h5>
+                            <div class="filter-options">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price1">
+                                    <label class="form-check-label" for="price1">Dưới 300.000₫</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price2">
+                                    <label class="form-check-label" for="price2">300.000₫ - 500.000₫</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price3">
+                                    <label class="form-check-label" for="price3">500.000₫ - 700.000₫</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="price4">
+                                    <label class="form-check-label" for="price4">Trên 700.000₫</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h5>Màu sắc</h5>
+                            <div class="color-options">
+                                <div class="color-option" style="background-color: #000;" title="Đen"></div>
+                                <div class="color-option" style="background-color: #fff; border: 1px solid #ddd;" title="Trắng"></div>
+                                <div class="color-option" style="background-color: #ff4c3b;" title="Đỏ"></div>
+                                <div class="color-option" style="background-color: #fb93ab;" title="Hồng"></div>
+                                <div class="color-option" style="background-color: #ffc107;" title="Vàng"></div>
+                                <div class="color-option" style="background-color: #2a4b8f;" title="Xanh dương"></div>
+                                <div class="color-option" style="background-color: #28a745;" title="Xanh lá"></div>
+                                <div class="color-option" style="background-color: #7952b3;" title="Tím"></div>
+                                <div class="color-option" style="background-color: #795548;" title="Nâu"></div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h5>Kích thước</h5>
+                            <div class="size-options">
+                                <div class="size-option">XS</div>
+                                <div class="size-option">S</div>
+                                <div class="size-option">M</div>
+                                <div class="size-option">L</div>
+                                <div class="size-option">XL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="col-lg-9">
+                    <div class="row g-3">
+                        <!-- Sản phẩm 1 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">-15%</span>
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse tay bồng FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse tay bồng FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">374.000₫</span>
+                                        <span class="old-price">440.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #000;"></span>
+                                        <span class="color-dot" style="background-color: #fff; border: 1px solid #ddd;"></span>
+                                        <span class="color-dot" style="background-color: #fb93ab;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse chiffon phối nơ FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse chiffon phối nơ FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">390.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #fff; border: 1px solid #ddd;"></span>
+                                        <span class="color-dot" style="background-color: #fb93ab;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 3 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse suông rã vai FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse suông rã vai FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">420.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #000;"></span>
+                                        <span class="color-dot" style="background-color: #fff; border: 1px solid #ddd;"></span>
+                                        <span class="color-dot" style="background-color: #2a4b8f;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 4 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">-20%</span>
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse họa tiết hoa FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse họa tiết hoa FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">352.000₫</span>
+                                        <span class="old-price">440.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background: linear-gradient(45deg, #ff6b6b, #ffc107, #28a745);"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 5 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse tay lửng FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse tay lửng FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">395.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #000;"></span>
+                                        <span class="color-dot" style="background-color: #fff; border: 1px solid #ddd;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 6 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse dáng oversize FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse dáng oversize FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">450.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #000;"></span>
+                                        <span class="color-dot" style="background-color: #7952b3;"></span>
+                                        <span class="color-dot" style="background-color: #28a745;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thêm sản phẩm 7-12 -->
+                        <!-- Sản phẩm 7 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse cổ V FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse cổ V FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">380.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #000;"></span>
+                                        <span class="color-dot" style="background-color: #ffc107;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 8 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <span class="badge bg-danger position-absolute top-0 start-0 m-2">-10%</span>
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse phối ren FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse phối ren FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">405.000₫</span>
+                                        <span class="old-price">450.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #fff; border: 1px solid #ddd;"></span>
+                                        <span class="color-dot" style="background-color: #fb93ab;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sản phẩm 9 -->
+                        <div class="col-6 col-md-4">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="https://via.placeholder.com/350x480" alt="Áo blouse kiểu FREELANCER">
+                                    <div class="product-actions">
+                                        <button class="btn-quickview" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+                                        <button class="btn-wishlist" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title"><a href="#">Áo blouse kiểu FREELANCER</a></h3>
+                                    <div class="product-price">
+                                        <span class="current-price">425.000₫</span>
+                                    </div>
+                                    <div class="product-colors">
+                                        <span class="color-dot" style="background-color: #000;"></span>
+                                        <span class="color-dot" style="background-color: #2a4b8f;"></span>
+                                        <span class="color-dot" style="background-color: #795548;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-container">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center mt-5">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+ <!-- Footer -->
+<footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5 class="mb-4">Clothing Store</h5>
+                <p class="mb-4">Thời trang cho mọi người với thiết kế hiện đại và chất lượng hàng đầu.</p>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h6 class="text-uppercase mb-4">Mua sắm</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="../products.html?category=men" class="text-white text-decoration-none">Thời trang Nam</a></li>
+                    <li class="mb-2"><a href="../products.html?category=women" class="text-white text-decoration-none">Thời trang Nữ</a></li>
+                    <li class="mb-2"><a href="../products.html?category=accessories" class="text-white text-decoration-none">Phụ kiện</a></li>
+                    <li class="mb-2"><a href="../sale.html" class="text-white text-decoration-none">Khuyến mãi</a></li>
+                    <li class="mb-2"><a href="../new-arrivals.html" class="text-white text-decoration-none">Hàng mới về</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h6 class="text-uppercase mb-4">Thông tin</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="../about.html" class="text-white text-decoration-none">Về chúng tôi</a></li>
+                    <li class="mb-2"><a href="../contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                    <li class="mb-2"><a href="../blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    <li class="mb-2"><a href="../faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                    <li class="mb-2"><a href="../stores.html" class="text-white text-decoration-none">Hệ thống cửa hàng</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h6 class="text-uppercase mb-4">Chính sách</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="../policy-shipping.html" class="text-white text-decoration-none">Chính sách vận chuyển</a></li>
+                    <li class="mb-2"><a href="../policy-return.html" class="text-white text-decoration-none">Chính sách đổi trả</a></li>
+                    <li class="mb-2"><a href="../policy-payment.html" class="text-white text-decoration-none">Phương thức thanh toán</a></li>
+                    <li class="mb-2"><a href="../policy-privacy.html" class="text-white text-decoration-none">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-4 pt-3 border-top">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="small mb-0">&copy; 2025 Clothing Store. Tất cả các quyền được bảo lưu.</p>
+            </div>
+             <div class="col-md-6 text-center text-md-end">
+                <div class="d-flex align-items-center justify-content-end">
+                    <p class="small mb-0 me-2">Chấp nhận thanh toán qua:</p>
+                    <img src="../image/icons/ZaloPay.png" alt="ZaloPay" height="30" class="ms-1">
+                    <img src="../image/icons/MoMo.png" alt="MoMo" height="30" class="ms-1">
+                    <img src="../image/icons/Visa.png" alt="Visa" height="30" class="ms-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top btn btn-dark" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Notification toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Thông báo</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Sản phẩm đã được thêm vào giỏ hàng!
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Back to top button functionality
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            
+            // Load featured products
+            loadFeaturedProducts();
+        });
+    </script>
+</body>
+</html>
