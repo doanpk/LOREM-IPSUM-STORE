@@ -654,11 +654,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../js/main.js"></script>
     
     <script>
         // Initialize tooltips
@@ -685,5 +680,80 @@
             });
         });
     </script>
+
+    <div class="contact-floating">
+        <a href="https://zalo.me/yourzalo" target="_blank" class="contact-logo contact-zalo" title="Liên hệ Zalo">
+            <img src="../image/icons/Zalo.png" alt="Zalo" />
+        </a>
+        <a href="https://m.me/yourfacebook" target="_blank" class="contact-logo contact-messenger" title="Liên hệ Messenger">
+            <img src="../image/icons/Messenger.png" alt="Messenger" />
+        </a>
+        <a href="#" class="contact-logo back-to-top" id="backToTop" title="Lên đầu trang">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            console.log("Document ready");
+            
+            if ($("#priceSlider").length) {
+                console.log("Price slider element found");
+                
+                try {
+                    $("#priceSlider").slider({
+                        range: true,
+                        min: 0,
+                        max: 3000000,
+                        values: [0, 3000000],
+                        slide: function(event, ui) {
+                            $("#minPrice").val(ui.values[0]);
+                            $("#maxPrice").val(ui.values[1]);
+                        }
+                    });
+                    console.log("Price slider initialized");
+                } catch (error) {
+                    console.error("Error initializing price slider:", error);
+                }
+            } else {
+                console.warn("Price slider element not found");
+            }
+            
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+        });
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        // Khởi tạo lại chức năng chọn màu sắc
+        initColorAndSizeSelection();
+        
+        // Debug clicks trên màu
+        $(document).on('click', '.color-option', function(e) {
+            console.log('Click registered on color:', $(this).attr('title'));
+        });
+    });
+    </script>
+    
+    <!-- Tải main.js và aosominam.js sau jQuery và jQuery UI -->
+    <script src="../js/main.js"></script>
+    <script src="../js/aosominam.js"></script>
 </body>
 </html>

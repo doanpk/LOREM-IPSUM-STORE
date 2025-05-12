@@ -165,7 +165,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    top: 10px; /* Đẩy icon xuống dưới cho cân giữa */
+    top: 10px;
     left: 11px;
 }
 @media (max-width: 768px) {

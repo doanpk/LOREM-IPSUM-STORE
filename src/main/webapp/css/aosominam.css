@@ -101,11 +101,42 @@
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    box-sizing: border-box;
 }
 
-.color-option:hover, .color-option.selected {
+/* .color-option:hover, .color-option.selected {
     border-color: #007bff;
     transform: scale(1.1);
+    position: relative;
+} */
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.selected {
+    border-color: #007bff !important; /* Thêm !important để đảm bảo không bị ghi đè */
+    transform: scale(1.1);
+    position: relative;
+}
+
+.color-option.selected::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 12px;
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    pointer-events: none;
+}
+
+.color-option[style*="background-color: #ffffff"].selected::after {
+    color: #000;
+    text-shadow: none;
 }
 
 /* Size Options */
@@ -352,10 +383,10 @@
 
 /* Cải thiện style cho slider */
 .price-slider {
-  height: 5px;
-  position: relative;
-  background: #e1e9f6;
-  border-radius: 5px;
+    height: 5px;
+    position: relative;
+    background: #e1e9f6;
+    border-radius: 5px;
 }
 
 .price-slider .ui-slider-range {
@@ -375,13 +406,6 @@
   top: -6px;
 }
 
-/* Cải thiện style cho input giá */
-.price-inputs .form-control {
-  font-weight: 500;
-  font-size: 14px;
-  padding-right: 20px;
-}
-
 .price-currency {
   position: absolute;
   right: 10px;
@@ -398,6 +422,7 @@
     position: absolute;
 }
 
+/* Đảm bảo các nút kéo hiển thị đúng */
 .ui-slider-handle {
     width: 18px !important;
     height: 18px !important;
@@ -408,6 +433,8 @@
     top: -7px !important;
     cursor: pointer;
     outline: none !important;
+    display: block !important;
+    position: absolute !important;
 }
 
 .ui-slider-handle:hover, .ui-slider-handle:active {
@@ -417,16 +444,21 @@
 /* Price Inputs */
 .price-inputs {
     margin-top: 15px;
+    width: 100%;
 }
 
 .price-inputs .form-control {
-    height: 40px;
-    font-size: 14px;
+    height: 38px;
+    font-size: 13px;
     text-align: right;
     padding-right: 15px;
-    width: 120px;
+    width: 100%;
+    min-width: 0;
     border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .price-currency {
     position: absolute;
@@ -436,4 +468,46 @@
     font-size: 14px;
     color: #666;
     pointer-events: none;
+}
+
+/* Nút back-to-top nổi tròn như contact-logo */
+.contact-logo.back-to-top {
+    border-color: #00b2ff;
+}
+.contact-floating .back-to-top {
+    background: #fff;
+    color: #222;
+    border-color: #00b2ff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+    margin-top: 0;
+}
+.contact-floating .back-to-top:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+.contact-floating .back-to-top i {
+    display: block;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
+    left: 11px;
+}
+@media (max-width: 768px) {
+    .contact-floating .back-to-top i {
+        font-size: 1.1rem;
+        top: 2px; /* Đẩy xuống ít hơn trên mobile */
+    }
 }
