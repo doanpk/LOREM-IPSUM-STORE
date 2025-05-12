@@ -272,72 +272,101 @@ a:hover {
 }
 /* ---------- END NAVIGATION & DROPDOWN MENU ---------- */
 
-/* Hero Banner */
-.hero-banner {
-    position: relative;
-}
-
-.hero-slide {
-    position: relative;
-    height: 80vh;
-    min-height: 500px;
-}
-
-.hero-slide img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.hero-content {
-    text-align: center;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
 
 /* Category Highlights */
+/* Category Highlights - Horizontal Layout */
 .category-highlights {
     padding: 60px 0;
+    background-color: #f8f9fa;
 }
 
-.category-card {
+.category-card-horizontal {
     position: relative;
-    border-radius: 0;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    height: 400px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.category-card:hover {
+.category-card-horizontal:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.category-card img {
+.category-card-horizontal img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.category-overlay {
+.category-card-horizontal:hover img {
+    transform: scale(1.05);
+}
+
+.category-overlay-horizontal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.category-overlay h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+.category-overlay-horizontal h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.category-overlay-horizontal .btn {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.category-overlay-horizontal .btn:hover {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .category-card-horizontal {
+        height: 180px;
+        margin-bottom: 20px;
+    }
+    
+    .category-highlights .col-lg {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card-horizontal {
+        height: 160px;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-card-horizontal {
+        height: 140px;
+    }
+    
+    .category-overlay-horizontal {
+        padding: 10px;
+    }
+    
+    .category-overlay-horizontal h5 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    .category-overlay-horizontal .btn {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
 }
 /* Horizontal Category Cards */
 .category-card-horizontal {
@@ -496,25 +525,97 @@ a:hover {
     }
 }
 
-/* Trending Section */
+/* Trending Section with Background Image */
 .trending-section {
-    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.trending-section .bg-image {
+    z-index: 0;
+}
+
+.trending-section .bg-image img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.trending-section .bg-image .overlay {
+    z-index: 1;
+}
+
+.trending-section .container {
+    z-index: 2;
+}
+
+.trending-section .summer-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.trending-section .summer-featured-image {
+    max-height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.trending-section .summer-featured-image:hover {
+    transform: scale(1.03);
 }
 
 .trending-section h2 {
-    font-weight: 700;
-    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .trending-section .lead {
-    color: #666;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.trending-section img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+.trending-section .text-warning {
+    color: #ffc107 !important;
 }
+
+.trending-section .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.trending-section .btn-warning:hover {
+    background-color: #ffca2c;
+    border-color: #ffca2c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .trending-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .trending-section .summer-featured-image {
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .trending-section .summer-content {
+        padding: 20px;
+    }
+}
+
 
 /* Testimonials */
 .testimonials {
@@ -596,25 +697,7 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Back to top button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    opacity: 0.7;
-    display: none;
-}
 
-.back-to-top:hover {
-    opacity: 1;
-}
 
 /* Buttons */
 .btn {
@@ -722,52 +805,97 @@ a:hover {
 .animate-fade-in {
     animation: fadeIn 0.5s ease-out;
 }
-/* Video background cho phần testimonials */
-.testimonials {
-    min-height: 900px;
-}
-
+/* Video Background Styling - dùng cho cả Hero Banner và Testimonials */
 .video-background {
     z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .video-background video {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
-    opacity: 0.4 !important; /* Giảm opacity của lớp overlay để thấy video rõ hơn */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Banner với Video Background */
+.hero-banner {
+    position: relative;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.hero-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-banner .row {
+    min-height: 75vh;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 3rem 0;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Testimonials với Video Background */
+.testimonials {
+    position: relative;
+    min-height: 900px;
+    overflow: hidden;
 }
 
 .testimonials .container {
+    position: relative;
     z-index: 2;
 }
 
 .testimonials .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.4) !important; /* Giảm độ đậm của background */
-    backdrop-filter: blur(3px); /* Giảm mức độ blur */
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
 
 .testimonials .testimonial-card:hover {
-    background-color: rgba(255, 255, 255, 0.65) !important; /* Tăng độ đậm khi hover */
+    background-color: rgba(255, 255, 255, 0.65) !important;
     backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Tăng độ nổi bật của nội dung trong card */
 .testimonials .stars {
     color: #ffc107;
     font-size: 1.1rem;
 }
 
 .testimonials .testimonial-card p {
-    color: rgba(0, 0, 0, 0.75); /* Màu text đậm hơn để đọc được */
+    color: rgba(0, 0, 0, 0.75);
     font-weight: 500;
 }
 
-/* Đảm bảo văn bản và nội dung luôn hiển thị rõ ràng trên nền video */
 .testimonials .section-title {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 2.5rem;
@@ -775,12 +903,6 @@ a:hover {
     color: #fff;
 }
 
-/* Thêm hiệu ứng glow nhẹ cho card khi hover */
-.testimonials .testimonial-card:hover {
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Điều chỉnh màu sắc của avatar và thông tin khách hàng */
 .testimonials .avatar img {
     border: 2px solid rgba(255, 255, 255, 0.6);
 }
@@ -791,4 +913,157 @@ a:hover {
 
 .testimonials .text-muted {
     color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-banner {
+        min-height: 70vh;
+    }
+    
+    .hero-banner .row {
+        min-height: 65vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-banner {
+        min-height: 60vh;
+    }
+    
+    .hero-banner .row {
+        min-height: 55vh;
+    }
+    
+    .testimonials {
+        min-height: 700px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-banner {
+        min-height: 50vh;
+    }
+    
+    .hero-banner .row {
+        min-height: 45vh;
+    }
+    
+    .testimonials {
+        min-height: 600px;
+    }
+}
+/* Floating contact logos đẹp hơn */
+.contact-floating {
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    border: 2.5px solid #e3e3e3;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+}
+
+.contact-logo img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+.contact-logo.contact-zalo {
+    border-color: #008fe5;
+}
+.contact-logo.contact-messenger {
+    border-color: #00b2ff;
+}
+
+.contact-logo:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+
+@media (max-width: 768px) {
+    .contact-floating {
+        right: 10px;
+        bottom: 70px;
+        gap: 10px;
+    }
+    .contact-logo {
+        width: 44px;
+        height: 44px;
+    }
+    .contact-logo img {
+        width: 28px;
+        height: 28px;
+    }
+}
+/* Nút back-to-top nổi tròn như contact-logo */
+.contact-logo.back-to-top {
+    border-color: #00b2ff;
+}
+.contact-floating .back-to-top {
+    background: #fff;
+    color: #222;
+    border-color: #00b2ff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+    margin-top: 0;
+}
+.contact-floating .back-to-top:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+.contact-floating .back-to-top i {
+    display: block;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px; /* Đẩy icon xuống dưới cho cân giữa */
+    left: 11px;
+}
+@media (max-width: 768px) {
+    .contact-floating .back-to-top i {
+        font-size: 1.1rem;
+        top: 2px; /* Đẩy xuống ít hơn trên mobile */
+    }
 }
