@@ -75,7 +75,7 @@
                         NEW COLLECTION
                     </a>
                     <div class="dropdown-menu" aria-labelledby="newCollectionDropdown">
-                        <a class="dropdown-item" href="products.html?category=new-arrivals">JOHN HENRY</a>
+                        <a class="dropdown-item" href="products.html?category=new-arrivals">NOMAD</a>
                         <a class="dropdown-item" href="products.html?category=bestsellers">FREELANCER</a>
                     </div>
                 </li>
@@ -83,14 +83,14 @@
                 <!-- JOHN HENRY -->
                 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="johnHenryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        JOHN HENRY
+        NOMAD
     </a>
     <ul class="dropdown-menu" aria-labelledby="johnHenryDropdown">
         <!-- ÁO NAM có submenu -->
         <li class="dropdown-submenu">
             <a class="dropdown-item dropdown-toggle" href="#">ÁO NAM</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Áo sơ mi</a></li>
+                <li><a class="dropdown-item" href="html/aosominam.html">Áo sơ mi</a></li>
                 <li><a class="dropdown-item" href="#">Áo thun</a></li>
                 <li><a class="dropdown-item" href="#">Áo polo</a></li>
             </ul>
@@ -191,18 +191,23 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Banneryhyhbb8y7 -->
-        <section class="hero-banner">
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <div class="hero-slider">
-                            <div class="hero-slide position-relative">
-                                <img src="image/banners/HOME.png" alt="New Arrivals" class="img-fluid w-100">
-                                <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
-                                    <h1 class="display-3 fw-bold mb-4">AN TOÀN<br>&<br>PHONG CÁCH</h1>
-                                    <a href="products.html?category=new" class="btn btn-light btn-lg">Khám phá ngay</a>
-                                </div>
-                            </div>
+                <!-- Hero Banner with Video Background -->
+        <section class="hero-banner position-relative overflow-hidden">
+            <!-- Video Background -->
+            <div class="video-background position-absolute top-0 start-0 w-100 h-100">
+                <video class="w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+                    <source src="videos/UQ_CMS_video_jp_2025_HOME_0509_women_home_06_pc.mp4" type="video/mp4">
+                </video>
+                <!-- Overlay to make text more readable -->
+                <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+            </div>
+            
+            <div class="container position-relative py-5">
+                <div class="row min-vh-75 align-items-center">
+                    <div class="col-12 text-center">
+                        <div class="hero-content py-5 my-5">
+                            <h1 class="display-3 fw-bold mb-4 text-white">AN TOÀN<br>&<br>PHONG CÁCH</h1>
+                            <a href="html/khamphangay.html" class="btn btn-light btn-lg">Khám phá ngay</a>
                         </div>
                     </div>
                 </div>
@@ -210,48 +215,50 @@
         </section>
 
                 <!-- Category Highlights - Modified for horizontal layout -->
+                <!-- Category Highlights - Modified for full container width -->
         <section class="category-highlights py-5">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-6 col-md-4 col-lg mb-4">
-                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
-                            <img src="image/banners/NewArrivals.png" alt="New Arrivals" class="img-fluid w-100">
+                <h2 class="section-title text-center mb-4">Danh mục sản phẩm</h2>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/NewArrivals.png" alt="New Arrivals" class="img-fluid w-100 h-100 object-fit-cover">
                             <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
                                 <h5 class="fs-6 mb-2">New Arrivals</h5>
                                 <a href="products.html?category=new" class="btn btn-outline-light btn-sm">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 col-lg mb-4">
-                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
-                            <img src="image/banners/ThoiTrangNam.png" alt="Thời trang Nam" class="img-fluid w-100">
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/ThoiTrangNam.png" alt="Thời trang Nam" class="img-fluid w-100 h-100 object-fit-cover">
                             <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
                                 <h5 class="fs-6 mb-2">Thời trang Nam</h5>
                                 <a href="products.html?category=men" class="btn btn-outline-light btn-sm">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 col-lg mb-4">
-                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
-                            <img src="image/banners/ThoiTrangNu.png" alt="Thời trang Nữ" class="img-fluid w-100">
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/ThoiTrangNu.png" alt="Thời trang Nữ" class="img-fluid w-100 h-100 object-fit-cover">
                             <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
                                 <h5 class="fs-6 mb-2">Thời trang Nữ</h5>
                                 <a href="products.html?category=women" class="btn btn-outline-light btn-sm">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 col-lg mb-4">
-                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
-                            <img src="image/banners/PhuKien.png" alt="Phụ kiện" class="img-fluid w-100">
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/PhuKien.png" alt="Phụ kiện" class="img-fluid w-100 h-100 object-fit-cover">
                             <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
                                 <h5 class="fs-6 mb-2">Phụ kiện</h5>
                                 <a href="products.html?category=accessories" class="btn btn-outline-light btn-sm">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 col-lg mb-4">
-                        <div class="category-card-horizontal position-relative rounded overflow-hidden">
-                            <img src="image/banners/Collections.png" alt="Collections" class="img-fluid w-100">
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/Collections.png" alt="Collections" class="img-fluid w-100 h-100 object-fit-cover">
                             <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
                                 <h5 class="fs-6 mb-2">Collections</h5>
                                 <a href="products.html?category=collections" class="btn btn-outline-light btn-sm">Xem thêm</a>
@@ -337,24 +344,30 @@
                         </div>
                     </div>
                 </section>
-        <!-- ...existing code... -->
-
-        <!-- Trending Section -->
-        <section class="trending-section py-5">
-            <div class="container">
+               <!-- Trending Section with Background Image -->
+        <section class="trending-section py-5 position-relative">
+            <!-- Background Image -->
+            <div class="bg-image position-absolute top-0 start-0 w-100 h-100">
+                <img src="image/banners/BackGroundHome.png" alt="Summer Collection Background" class="w-100 h-100 object-fit-cover">
+                <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+            </div>
+            
+            <div class="container position-relative">
                 <div class="row align-items-center">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="image/banners/SummerCollection.png" alt="BST mùa hè" class="img-fluid rounded shadow">
+                    <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+                        <img src="image/banners/SummerCollection.png" alt="BST mùa hè" class="img-fluid rounded shadow summer-featured-image">
                     </div>
                     <div class="col-md-6 ps-md-5">
-                        <h2 class="display-6 mb-4">Bộ sưu tập mùa hè 2025</h2>
-                        <p class="lead mb-4">Khám phá những thiết kế mới nhất cho mùa hè sôi động với các sản phẩm chất lượng cao và phong cách độc đáo.</p>
-                        <ul class="list-unstyled mb-4">
-                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Chất liệu thoáng mát</li>
-                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Thiết kế hiện đại</li>
-                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Đa dạng màu sắc</li>
-                        </ul>
-                        <a href="products.html?collection=summer2025" class="btn btn-dark">Khám phá ngay</a>
+                        <div class="summer-content text-white p-4 rounded">
+                            <h2 class="display-6 mb-4">Bộ sưu tập mùa hè 2025</h2>
+                            <p class="lead mb-4">Khám phá những thiết kế mới nhất cho mùa hè sôi động với các sản phẩm chất lượng cao và phong cách độc đáo.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check2-circle text-warning me-2"></i> Chất liệu thoáng mát</li>
+                                <li class="mb-2"><i class="bi bi-check2-circle text-warning me-2"></i> Thiết kế hiện đại</li>
+                                <li class="mb-2"><i class="bi bi-check2-circle text-warning me-2"></i> Đa dạng màu sắc</li>
+                            </ul>
+                            <a href="products.html?collection=summer2025" class="btn btn-warning">Khám phá ngay</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -585,13 +598,9 @@
                 </div>
             </div>
         </div>
+       
     </footer>
-    
-    <!-- Back to top button -->
-    <a href="#" class="back-to-top btn btn-dark" id="backToTop">
-        <i class="bi bi-arrow-up"></i>
-    </a>
-
+ 
     <!-- Notification toast -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -638,5 +647,17 @@
             loadFeaturedProducts();
         });
     </script>
+        <!-- Floating Contact Logos -->
+    <div class="contact-floating">
+        <a href="https://zalo.me/yourzalo" target="_blank" class="contact-logo contact-zalo" title="Liên hệ Zalo">
+            <img src="image/icons/Zalo.png" alt="Zalo" />
+        </a>
+        <a href="https://m.me/yourfacebook" target="_blank" class="contact-logo contact-messenger" title="Liên hệ Messenger">
+            <img src="image/icons/Messenger.png" alt="Messenger" />
+        </a>
+        <a href="#" class="contact-logo back-to-top" id="backToTop" title="Lên đầu trang">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+    </div>
 </body>
 </html>

@@ -1,0 +1,176 @@
+body {
+    background: #f8f9fa;
+}
+
+.header {
+    border-bottom: 1px solid #eee;
+}
+
+.banner {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+}
+.banner-img {
+    width: 130%;
+    height: 520px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+.banner-overlay {
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+}
+.banner .navbar {
+    z-index: 3;
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+}
+.text-shadow {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.main-content {
+    min-height: 500px;
+}
+
+.process-content {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.process-list {
+    padding-left: 1.2em;
+    font-size: 1.08rem;
+}
+
+.process-list li {
+    margin-bottom: 1.2em;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .banner, .banner-img {
+        height: 200px;
+    }
+    .main-content {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner, .banner-img {
+        height: 140px;
+    }
+    .process-content {
+        padding: 1.2rem;
+    }
+    .process-list {
+        font-size: 1rem;
+    }
+}
+/* Floating contact logos đẹp hơn */
+.contact-floating {
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    border: 2.5px solid #e3e3e3;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+}
+
+.contact-logo img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+.contact-logo.contact-zalo {
+    border-color: #008fe5;
+}
+.contact-logo.contact-messenger {
+    border-color: #00b2ff;
+}
+
+.contact-logo:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+
+@media (max-width: 768px) {
+    .contact-floating {
+        right: 10px;
+        bottom: 70px;
+        gap: 10px;
+    }
+    .contact-logo {
+        width: 44px;
+        height: 44px;
+    }
+    .contact-logo img {
+        width: 28px;
+        height: 28px;
+    }
+}
+/* Nút back-to-top nổi tròn như contact-logo */
+.contact-logo.back-to-top {
+    border-color: #00b2ff;
+}
+.contact-floating .back-to-top {
+    background: #fff;
+    color: #222;
+    border-color: #00b2ff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+    margin-top: 0;
+}
+.contact-floating .back-to-top:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+.contact-floating .back-to-top i {
+    display: block;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px; /* Đẩy icon xuống dưới cho cân giữa */
+    left: 11px;
+}
+@media (max-width: 768px) {
+    .contact-floating .back-to-top i {
+        font-size: 1.1rem;
+        top: 2px; /* Đẩy xuống ít hơn trên mobile */
+    }
+}
