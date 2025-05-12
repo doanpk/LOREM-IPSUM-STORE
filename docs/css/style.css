@@ -1,0 +1,1069 @@
+/* Global Styles */
+:root {
+    --primary-color: #c73133;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Announcement Banner */
+.announcement-banner {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #fff;
+    position: sticky; /* Thêm position: sticky */
+    top: 0; /* Cố định ở vị trí top: 0 */
+    z-index: 1000; /* Đảm bảo header hiển thị trên các phần tử khác */
+    width: 100%; /* Đảm bảo chiều rộng 100% */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Thêm đổ bóng nhẹ để tạo chiều sâu */
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi scroll */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-input {
+    border-radius: 30px;
+    padding-right: 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+}
+
+.search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    padding: 0 15px;
+    color: #777;
+}
+
+/* Header shrink effect when scrolling */
+.header-shrink {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-shrink .navbar-nav .nav-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* User Tools */
+.header-tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tool-icon {
+    font-size: 1.3rem;
+    margin-left: 15px;
+    color: #444;
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- NAVIGATION & DROPDOWN MENU ---------- */
+/* Main Navigation */
+.navbar {
+    padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 20px;
+    letter-spacing: 0.5px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: var(--primary-color);
+}
+
+/* Dropdown Menu - Main Level */
+.navbar-nav .dropdown-menu {
+    min-width: 180px;
+    width: 180px;
+    padding: 0;
+    margin-top: 0;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    display: block; /* Keep display:block for smooth transition */
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.navbar-nav .dropdown:hover > .dropdown-menu,
+.navbar-nav .dropdown.show > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Dropdown Item Styling */
+.navbar-nav .dropdown-item {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #f5f5f5;
+    color: #333;
+    transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+.navbar-nav .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+}
+
+/* Submenu Styling */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    margin-left: 0;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    display: block;
+    pointer-events: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Add Bootstrap icon as ::after element */
+.dropdown-submenu > .dropdown-item {
+    position: relative;
+    padding-right: 24px;
+}
+
+.dropdown-submenu > .dropdown-item::after {
+    content: "\F231"; /* Chevron-right Unicode từ Bootstrap Icons */
+    font-family: "bootstrap-icons";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #999;
+}
+
+.dropdown-submenu > .dropdown-item:hover::after {
+    color: var(--primary-color);
+}
+
+/* Ẩn mũi tên mặc định của Bootstrap hướng xuống */
+.dropdown-submenu > .dropdown-item.dropdown-toggle::after {
+    display: none; /* Ẩn mũi tên xuống mặc định của Bootstrap */
+}
+
+/* Chỉ giữ lại mũi tên sang phải */
+.dropdown-submenu > .dropdown-item::after {
+    content: "\F231"; /* Chevron-right Unicode từ Bootstrap Icons */
+    font-family: "bootstrap-icons";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #999;
+    border: none; /* Xóa border mặc định của Bootstrap */
+}
+
+/* Dropdown title/header */
+.dropdown-header {
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 16px;
+}
+/* ---------- END NAVIGATION & DROPDOWN MENU ---------- */
+
+
+/* Category Highlights */
+/* Category Highlights - Horizontal Layout */
+.category-highlights {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.category-card-horizontal {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.category-card-horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card-horizontal:hover img {
+    transform: scale(1.05);
+}
+
+.category-overlay-horizontal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.category-overlay-horizontal h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.category-overlay-horizontal .btn {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.category-overlay-horizontal .btn:hover {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .category-card-horizontal {
+        height: 180px;
+        margin-bottom: 20px;
+    }
+    
+    .category-highlights .col-lg {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card-horizontal {
+        height: 160px;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-card-horizontal {
+        height: 140px;
+    }
+    
+    .category-overlay-horizontal {
+        padding: 10px;
+    }
+    
+    .category-overlay-horizontal h5 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    .category-overlay-horizontal .btn {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+}
+/* Horizontal Category Cards */
+.category-card-horizontal {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 220px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card-horizontal:hover {
+    transform: translateY(-5px);
+}
+
+.category-card-horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-overlay-horizontal {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.category-overlay-horizontal h5 {
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    margin-bottom: 8px;
+}
+
+.category-overlay-horizontal .btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .category-card-horizontal {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card-horizontal {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-card-horizontal {
+        height: 150px;
+    }
+    .category-overlay-horizontal {
+        padding: 10px;
+    }
+    .category-overlay-horizontal h5 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    .category-overlay-horizontal .btn-sm {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* Featured Products */
+.featured-products {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.product-card {
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.product-price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.product-price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-weight: 400;
+    margin-right: 8px;
+    font-size: 14px;
+}
+/* Thêm vào file CSS của bạn */
+.product-img-container {
+    height: 105px;
+    overflow: hidden;
+}
+
+.product-img-container img {
+    object-fit: cover;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .product-img-container {
+        height: 150px;
+    }
+}
+
+/* Trending Section with Background Image */
+.trending-section {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.trending-section .bg-image {
+    z-index: 0;
+}
+
+.trending-section .bg-image img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.trending-section .bg-image .overlay {
+    z-index: 1;
+}
+
+.trending-section .container {
+    z-index: 2;
+}
+
+.trending-section .summer-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.trending-section .summer-featured-image {
+    max-height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.trending-section .summer-featured-image:hover {
+    transform: scale(1.03);
+}
+
+.trending-section h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.trending-section .lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.trending-section .text-warning {
+    color: #ffc107 !important;
+}
+
+.trending-section .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.trending-section .btn-warning:hover {
+    background-color: #ffca2c;
+    border-color: #ffca2c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .trending-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .trending-section .summer-featured-image {
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .trending-section .summer-content {
+        padding: 20px;
+    }
+}
+
+
+/* Testimonials */
+.testimonials {
+    padding: 60px 0;
+}
+
+.testimonial-card {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: var(--warning-color);
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.newsletter h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form .form-control {
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ddd;
+    height: 50px;
+}
+
+.newsletter-form .btn {
+    border-radius: 0 30px 30px 0;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer h5, .footer h6 {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+
+
+/* Buttons */
+.btn {
+    border-radius: 0;
+    padding: 10px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #b12a2c;
+    border-color: #b12a2c;
+}
+
+.btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-slide {
+        height: 60vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    /* Fix dropdown on mobile */
+    .dropdown-submenu .dropdown-menu {
+        left: 0;
+        top: 100%;
+        margin-top: 0;
+        margin-left: 0.5rem;
+    }
+    
+    .dropdown-submenu > .dropdown-item:after {
+        content: "▼";
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-slide {
+        height: 50vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .category-card {
+        height: 300px;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-slide {
+        height: 40vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .category-card {
+        height: 250px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+/* Video Background Styling - dùng cho cả Hero Banner và Testimonials */
+.video-background {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Banner với Video Background */
+.hero-banner {
+    position: relative;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.hero-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-banner .row {
+    min-height: 75vh;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 3rem 0;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Testimonials với Video Background */
+.testimonials {
+    position: relative;
+    min-height: 900px;
+    overflow: hidden;
+}
+
+.testimonials .container {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonials .testimonial-card {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.testimonials .testimonial-card:hover {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.testimonials .stars {
+    color: #ffc107;
+    font-size: 1.1rem;
+}
+
+.testimonials .testimonial-card p {
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 500;
+}
+
+.testimonials .section-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.testimonials .avatar img {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.testimonials .testimonial-card h6 {
+    font-weight: 600;
+}
+
+.testimonials .text-muted {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-banner {
+        min-height: 70vh;
+    }
+    
+    .hero-banner .row {
+        min-height: 65vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-banner {
+        min-height: 60vh;
+    }
+    
+    .hero-banner .row {
+        min-height: 55vh;
+    }
+    
+    .testimonials {
+        min-height: 700px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-banner {
+        min-height: 50vh;
+    }
+    
+    .hero-banner .row {
+        min-height: 45vh;
+    }
+    
+    .testimonials {
+        min-height: 600px;
+    }
+}
+/* Floating contact logos đẹp hơn */
+.contact-floating {
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    border: 2.5px solid #e3e3e3;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+}
+
+.contact-logo img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+}
+
+.contact-logo.contact-zalo {
+    border-color: #008fe5;
+}
+.contact-logo.contact-messenger {
+    border-color: #00b2ff;
+}
+
+.contact-logo:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+
+@media (max-width: 768px) {
+    .contact-floating {
+        right: 10px;
+        bottom: 70px;
+        gap: 10px;
+    }
+    .contact-logo {
+        width: 44px;
+        height: 44px;
+    }
+    .contact-logo img {
+        width: 28px;
+        height: 28px;
+    }
+}
+/* Nút back-to-top nổi tròn như contact-logo */
+.contact-logo.back-to-top {
+    border-color: #00b2ff;
+}
+.contact-floating .back-to-top {
+    background: #fff;
+    color: #222;
+    border-color: #00b2ff;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    overflow: hidden;
+    margin-top: 0;
+}
+.contact-floating .back-to-top:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-color: #0a58ca;
+    background: #f0f8ff;
+}
+.contact-floating .back-to-top i {
+    display: block;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px; /* Đẩy icon xuống dưới cho cân giữa */
+    left: 11px;
+}
+@media (max-width: 768px) {
+    .contact-floating .back-to-top i {
+        font-size: 1.1rem;
+        top: 2px; /* Đẩy xuống ít hơn trên mobile */
+    }
+}

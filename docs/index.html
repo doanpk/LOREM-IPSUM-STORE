@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOREM IPSUM - STORE</title>
+    <link rel="icon" href="image/LOGO.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="container-fluid bg-danger text-white py-2">
+            <div class="d-flex justify-content-center align-items-center">
+                <i class="bi bi-bell me-2"></i>
+                <span>MIỄN PHÍ VẬN CHUYỂN ĐƠN HÀNG TỪ 299K</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-3 col-6">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="image/LOGO.png" height="40">
+                        LOREM IPSUM - STORE
+                    </a>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Tìm kiếm sản phẩm...">
+                        <button class="search-button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div> 
+                </div>
+                
+                <!-- User Tools -->
+                <div class="col-md-3 col-6 text-end">
+                    <div class="header-tools">
+                        <a href="#" class="tool-icon" data-bs-toggle="tooltip" title="Tìm cửa hàng">
+                            <i class="bi bi-geo-alt"></i>
+                        </a>
+                        <a href="account.html" class="tool-icon" data-bs-toggle="tooltip" title="Tài khoản">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <a href="cart.html" class="tool-icon position-relative" data-bs-toggle="tooltip" title="Giỏ hàng">
+                            <i class="bi bi-bag"></i>
+                            <span class="cart-badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ...existing code... -->
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-top border-bottom">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto">
+                <!-- NEW COLLECTION -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="newCollectionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        NEW COLLECTION
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="newCollectionDropdown">
+                        <a class="dropdown-item" href="products.html?category=new-arrivals">NOMAD</a>
+                        <a class="dropdown-item" href="products.html?category=bestsellers">FREELANCER</a>
+                    </div>
+                </li>
+                
+                <!-- JOHN HENRY -->
+                <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="johnHenryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        NOMAD
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="johnHenryDropdown">
+        <!-- ÁO NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">ÁO NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="html/aosominam.html">Áo sơ mi</a></li>
+                <li><a class="dropdown-item" href="#">Áo thun</a></li>
+                <li><a class="dropdown-item" href="#">Áo polo</a></li>
+            </ul>
+        </li>
+        <!-- QUẦN NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">QUẦN NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Quần jeans</a></li>
+                <li><a class="dropdown-item" href="#">Quần tây</a></li>
+                <li><a class="dropdown-item" href="#">Quần short</a></li>
+            </ul>
+        </li>
+        <!-- PHỤ KIỆN NAM có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">PHỤ KIỆN NAM</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Thắt lưng</a></li>
+                <li><a class="dropdown-item" href="#">Ví da</a></li>
+                <li><a class="dropdown-item" href="#">Nón</a></li>
+            </ul>
+        </li>
+        <!-- ONLINE ONLY không có submenu -->
+        <li>
+            <a class="dropdown-item" href="#">ONLINE ONLY</a>
+        </li>
+    </ul>
+</li>
+                
+            <!-- FREELANCER -->
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="freelancerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        FREELANCER
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="freelancerDropdown">
+        <!-- ĐẦM không có submenu -->
+        <li>
+            <a class="dropdown-item" href="html/dam.html">ĐẦM</a>
+        </li>
+        <!-- CHÂN VÁY không có submenu -->
+        <li>
+            <a class="dropdown-item" href="freelancer/chan-vay.html">CHÂN VÁY</a>
+        </li>
+        <!-- ÁO NỮ có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">ÁO NỮ</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="html/aoblouse.html">ÁO BLOUSE</a></li>
+                <li><a class="dropdown-item" href="freelancer/ao/t-shirt.html">ÁO T-SHIRT</a></li>
+                <li><a class="dropdown-item" href="freelancer/ao/so-mi.html">ÁO SƠ MI</a></li>
+                <li><a class="dropdown-item" href="freelancer/ao/polo.html">ÁO POLO</a></li>
+                <li><a class="dropdown-item" href="freelancer/ao/blazer.html">ÁO BLAZER</a></li>
+                <li><a class="dropdown-item" href="freelancer/ao/len.html">ÁO LEN</a></li>
+            </ul>
+        </li>
+        <!-- QUẦN NỮ có submenu -->
+        <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">QUẦN NỮ</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="freelancer/quan/jeans.html">QUẦN JEANS</a></li>
+                <li><a class="dropdown-item" href="freelancer/quan/tay.html">QUẦN TÂY</a></li>
+                <li><a class="dropdown-item" href="freelancer/quan/short.html">QUẦN SHORT</a></li>
+            </ul>
+        </li>
+        <!-- PHỤ KIỆN NỮ không có submenu -->
+        <li>
+            <a class="dropdown-item" href="freelancer/phu-kien.html">PHỤ KIỆN NỮ</a>
+        </li>
+    </ul>
+</li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">BLOG</a>
+                </li>
+                
+                <!-- CỬA HÀNG -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="storesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        CỬA HÀNG
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="storesDropdown">
+                        <a class="dropdown-item" href="stores.html?location=hcm">TP.HỒ CHÍ MINH</a>
+                        <a class="dropdown-item" href="stores.html?location=hn">HÀ NỘI</a>
+                        <a class="dropdown-item" href="stores.html?location=dn">ĐÀ NẴNG</a>
+                        <a class="dropdown-item" href="stores.html">TẤT CẢ CỬA HÀNG</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="uniformpro.html">UNIFORMPRO</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Banneryhyhbb8y7 -->
+                <!-- Hero Banner with Video Background -->
+        <section class="hero-banner position-relative overflow-hidden">
+            <!-- Video Background -->
+            <div class="video-background position-absolute top-0 start-0 w-100 h-100">
+                <video class="w-100 h-100 object-fit-cover" autoplay muted loop playsinline>
+                    <source src="videos/UQ_CMS_video_jp_2025_HOME_0509_women_home_06_pc.mp4" type="video/mp4">
+                </video>
+                <!-- Overlay to make text more readable -->
+                <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+            </div>
+            
+            <div class="container position-relative py-5">
+                <div class="row min-vh-75 align-items-center">
+                    <div class="col-12 text-center">
+                        <div class="hero-content py-5 my-5">
+                            <h1 class="display-3 fw-bold mb-4 text-white">AN TOÀN<br>&<br>PHONG CÁCH</h1>
+                            <a href="html/khamphangay.html" class="btn btn-light btn-lg">Khám phá ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Category Highlights - Modified for horizontal layout -->
+                <!-- Category Highlights - Modified for full container width -->
+        <section class="category-highlights py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-4">Danh mục sản phẩm</h2>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/NewArrivals.png" alt="New Arrivals" class="img-fluid w-100 h-100 object-fit-cover">
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">New Arrivals</h5>
+                                <a href="products.html?category=new" class="btn btn-outline-light btn-sm">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/ThoiTrangNam.png" alt="Thời trang Nam" class="img-fluid w-100 h-100 object-fit-cover">
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Thời trang Nam</h5>
+                                <a href="products.html?category=men" class="btn btn-outline-light btn-sm">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/ThoiTrangNu.png" alt="Thời trang Nữ" class="img-fluid w-100 h-100 object-fit-cover">
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Thời trang Nữ</h5>
+                                <a href="products.html?category=women" class="btn btn-outline-light btn-sm">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/PhuKien.png" alt="Phụ kiện" class="img-fluid w-100 h-100 object-fit-cover">
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Phụ kiện</h5>
+                                <a href="products.html?category=accessories" class="btn btn-outline-light btn-sm">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg mb-lg-0">
+                        <div class="category-card-horizontal position-relative rounded overflow-hidden h-100">
+                            <img src="image/banners/Collections.png" alt="Collections" class="img-fluid w-100 h-100 object-fit-cover">
+                            <div class="category-overlay-horizontal position-absolute start-0 bottom-0 end-0 p-3 text-white">
+                                <h5 class="fs-6 mb-2">Collections</h5>
+                                <a href="products.html?category=collections" class="btn btn-outline-light btn-sm">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+                             <!-- Featured Products - Modified layout -->
+                <section class="featured-products py-5 bg-light">
+                    <div class="container">
+                        <h2 class="section-title text-center mb-5">Sản phẩm nổi bật</h2>
+                        <div class="row">
+                            <!-- Left side - Featured image (điều chỉnh responsive) -->
+                            <div class="col-lg-7 col-md-6 mb-4">
+                                <div class="featured-image h-100 position-relative rounded overflow-hidden">
+                                    <img src="image/banners/SanPhamNoiBat.png" alt="Sản phẩm nổi bật" class="img-fluid w-100 object-fit-cover">
+                                    <div class="position-absolute bottom-0 start-0 p-4 text-white">
+                                        <h3 class="fs-4 mb-2">Bộ sưu tập mới nhất</h3>
+                                        <a href="products.html?category=featured" class="btn btn-outline-light">Xem ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Right side - Products grid (điều chỉnh responsive) -->
+                            <div class="col-lg-5 col-md-6">
+                                <div class="row g-3" id="featured-products-container">
+                                    <!-- Product 1 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoPoloNike.png" alt="Áo Polo Nike" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Polo Nike</h5>
+                                            <div class="product-price mb-2">599.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 2 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoThunAdidas.png" alt="Áo Thun Adidas" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Thun Adidas</h5>
+                                            <div class="product-price mb-2">399.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 3 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoPoloNikeBlue.png" alt="Áo Polo Nike" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Polo Nike Blue</h5>
+                                            <div class="product-price mb-2">599.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Product 4 -->
+                                    <div class="col-6 mb-3">
+                                        <div class="product-card p-2 bg-white rounded shadow-sm h-100">
+                                            <div class="product-img-container mb-2">
+                                                <img src="image/products/AoThunAdidasBlack.png" alt="Áo Thun Adidas" class="img-fluid w-100">
+                                            </div>
+                                            <h5 class="product-title fs-6 text-truncate">Áo Thun Adidas Black</h5>
+                                            <div class="product-price mb-2">399.000đ</div>
+                                            <button class="btn btn-primary btn-sm w-100">THÊM VÀO GIỎ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="products.html" class="btn btn-primary">Xem tất cả sản phẩm</a>
+                        </div>
+                    </div>
+                </section>
+               <!-- Trending Section with Background Image -->
+        <section class="trending-section py-5 position-relative">
+            <!-- Background Image -->
+            <div class="bg-image position-absolute top-0 start-0 w-100 h-100">
+                <img src="image/banners/BackGroundHome.png" alt="Summer Collection Background" class="w-100 h-100 object-fit-cover">
+                <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-40"></div>
+            </div>
+            
+            <div class="container position-relative">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+                        <img src="image/banners/SummerCollection.png" alt="BST mùa hè" class="img-fluid rounded shadow summer-featured-image">
+                    </div>
+                    <div class="col-md-6 ps-md-5">
+                        <div class="summer-content text-white p-4 rounded">
+                            <h2 class="display-6 mb-4">Bộ sưu tập mùa hè 2025</h2>
+                            <p class="lead mb-4">Khám phá những thiết kế mới nhất cho mùa hè sôi động với các sản phẩm chất lượng cao và phong cách độc đáo.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check2-circle text-warning me-2"></i> Chất liệu thoáng mát</li>
+                                <li class="mb-2"><i class="bi bi-check2-circle text-warning me-2"></i> Thiết kế hiện đại</li>
+                                <li class="mb-2"><i class="bi bi-check2-circle text-warning me-2"></i> Đa dạng màu sắc</li>
+                            </ul>
+                            <a href="products.html?collection=summer2025" class="btn btn-warning">Khám phá ngay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Testimonials with Video Background -->
+<section class="testimonials py-5 position-relative overflow-hidden">
+    <!-- Video Background -->
+    <div class="video-background position-absolute top-0 start-0 w-100 h-100">
+        <video class="w-100 h-100 object-fit-cover" autoplay muted loop>
+            <source src="videos/UQ_ST3_vn_imagesother_bratop_25SS_Bratop_PC_EN.mp4" type="video/mp4">
+        </video>
+        <!-- Overlay to make text more readable - giảm opacity xuống -->
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+    </div>
+    
+    <div class="container position-relative py-5">
+        <h2 class="section-title text-center mb-5 text-white">Khách hàng nói gì về chúng tôi</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 bg-white bg-opacity-60 rounded shadow h-100">
+                    <div class="stars mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <p class="mb-3">"Sản phẩm chất lượng tuyệt vời, giao hàng nhanh chóng, nhân viên tư vấn nhiệt tình. Tôi rất hài lòng!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="images/testimonials/avatar1.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Nguyễn Văn A</h6>
+                            <small class="text-muted">Khách hàng thân thiết</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 bg-white bg-opacity-60 rounded shadow h-100">
+                    <div class="stars mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                    </div>
+                    <p class="mb-3">"Đồ đẹp, hợp xu hướng, giá cả phải chăng. Chắc chắn sẽ quay lại mua sắm nhiều lần nữa!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="images/testimonials/avatar2.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Trần Thị B</h6>
+                            <small class="text-muted">Khách hàng mới</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card p-4 bg-white bg-opacity-60 rounded shadow h-100">
+                    <div class="stars mb-3">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star text-warning"></i>
+                    </div>
+                    <p class="mb-3">"Chất lượng sản phẩm tốt, đúng như mô tả. Dịch vụ chăm sóc khách hàng tuyệt vời, sẽ ủng hộ tiếp!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="avatar me-3">
+                            <img src="images/testimonials/avatar3.jpg" alt="Avatar" class="rounded-circle" width="50" height="50">
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Lê Văn C</h6>
+                            <small class="text-muted">Khách hàng VIP</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                </section>
+        
+        <!-- Blog Section -->
+        <section class="blog-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Bài viết mới nhất</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card blog-card h-100 border-0 shadow-sm">
+                            <img src="image/blogs/XuHuong.png" class="card-img-top" alt="Xu hướng thời trang mùa hè">
+                            <div class="card-body">
+                                <div class="mb-2 text-muted small">
+                                    <i class="bi bi-calendar-event me-2"></i>10/05/2025
+                                    <i class="bi bi-person ms-3 me-2"></i>Admin
+                                </div>
+                                <h5 class="card-title">Xu hướng thời trang mùa hè 2025</h5>
+                                <p class="card-text">Khám phá những xu hướng thời trang mới nhất cho mùa hè năm nay. Từ trang phục đi biển đến các buổi tiệc tối sang trọng...</p>
+                                <a href="blog-detail.html?id=1" class="btn btn-outline-dark mt-2">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card blog-card h-100 border-0 shadow-sm">
+                            <img src="image/blogs/PhoiDoCongSo.png" class="card-img-top" alt="Cách phối đồ công sở">
+                            <div class="card-body">
+                                <div class="mb-2 text-muted small">
+                                    <i class="bi bi-calendar-event me-2"></i>05/05/2025
+                                    <i class="bi bi-person ms-3 me-2"></i>Fashion Editor
+                                </div>
+                                <h5 class="card-title">5 cách phối đồ công sở vừa lịch sự vừa thời trang</h5>
+                                <p class="card-text">Làm thế nào để vừa đảm bảo tính chuyên nghiệp vừa thể hiện phong cách cá nhân nơi công sở? Hãy cùng tìm hiểu...</p>
+                                <a href="blog-detail.html?id=2" class="btn btn-outline-dark mt-2">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="card blog-card h-100 border-0 shadow-sm">
+                            <img src="image/blogs/ChamSoc.png" class="card-img-top" alt="Chăm sóc quần áo">
+                            <div class="card-body">
+                                <div class="mb-2 text-muted small">
+                                    <i class="bi bi-calendar-event me-2"></i>01/05/2025
+                                    <i class="bi bi-person ms-3 me-2"></i>Stylist
+                                </div>
+                                <h5 class="card-title">Bí quyết chăm sóc quần áo bền đẹp như mới</h5>
+                                <p class="card-text">Những mẹo hữu ích giúp bạn giữ cho trang phục luôn bền đẹp, giữ form dáng và màu sắc như mới mua...</p>
+                                <a href="blog-detail.html?id=3" class="btn btn-outline-dark mt-2">Đọc tiếp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="blog.html" class="btn btn-primary">Xem tất cả bài viết</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter -->
+
+        <!-- Newsletter -->
+        <section class="newsletter py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h3 class="mb-4">Đăng ký nhận tin</h3>
+                        <p class="mb-4">Nhận thông tin về sản phẩm mới và khuyến mãi hấp dẫn</p>
+                        <form class="newsletter-form">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Email của bạn" required>
+                                <button class="btn btn-dark" type="submit">Đăng ký</button>
+                            </div>
+                            <div class="form-check text-start">
+                                <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                <label class="form-check-label small" for="privacyCheck">
+                                    Tôi đồng ý với <a href="privacy.html">chính sách bảo mật</a> và nhận email từ Clothing Store
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="mb-4">Clothing Store</h5>
+                    <p class="mb-4">Thời trang cho mọi người với thiết kế hiện đại và chất lượng hàng đầu.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Mua sắm</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html?category=men" class="text-white text-decoration-none">Thời trang Nam</a></li>
+                        <li class="mb-2"><a href="products.html?category=women" class="text-white text-decoration-none">Thời trang Nữ</a></li>
+                        <li class="mb-2"><a href="products.html?category=accessories" class="text-white text-decoration-none">Phụ kiện</a></li>
+                        <li class="mb-2"><a href="sale.html" class="text-white text-decoration-none">Khuyến mãi</a></li>
+                        <li class="mb-2"><a href="new-arrivals.html" class="text-white text-decoration-none">Hàng mới về</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Thông tin</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">Về chúng tôi</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Liên hệ</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="stores.html" class="text-white text-decoration-none">Hệ thống cửa hàng</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase mb-4">Chính sách</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="policy-shipping.html" class="text-white text-decoration-none">Chính sách vận chuyển</a></li>
+                        <li class="mb-2"><a href="policy-return.html" class="text-white text-decoration-none">Chính sách đổi trả</a></li>
+                        <li class="mb-2"><a href="policy-payment.html" class="text-white text-decoration-none">Phương thức thanh toán</a></li>
+                        <li class="mb-2"><a href="policy-privacy.html" class="text-white text-decoration-none">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4 pt-3 border-top">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Clothing Store. Tất cả các quyền được bảo lưu.</p>
+                </div>
+                     <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <p class="small mb-0 me-2">Chấp nhận thanh toán qua:</p>
+                        <img src="image/icons/ZaloPay.png" alt="ZaloPay" height="30" class="ms-1">
+                        <img src="image/icons/MoMo.png" alt="MoMo" height="30" class="ms-1">
+                        <img src="image/icons/Visa.png" alt="Visa" height="30" class="ms-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+ 
+    <!-- Notification toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Thông báo</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Sản phẩm đã được thêm vào giỏ hàng!
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+            
+            // Back to top button functionality
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
+            
+            // Load featured products
+            loadFeaturedProducts();
+        });
+    </script>
+        <!-- Floating Contact Logos -->
+    <div class="contact-floating">
+        <a href="https://zalo.me/yourzalo" target="_blank" class="contact-logo contact-zalo" title="Liên hệ Zalo">
+            <img src="image/icons/Zalo.png" alt="Zalo" />
+        </a>
+        <a href="https://m.me/yourfacebook" target="_blank" class="contact-logo contact-messenger" title="Liên hệ Messenger">
+            <img src="image/icons/Messenger.png" alt="Messenger" />
+        </a>
+        <a href="#" class="contact-logo back-to-top" id="backToTop" title="Lên đầu trang">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+    </div>
+</body>
+</html>
